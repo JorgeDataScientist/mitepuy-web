@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "title": "MiTepuy | Presencia Digital Premium para Agentes Inmobiliarios",
+    "description": "MiTepuy impulsa la presencia digital de agentes inmobiliarios independientes mediante perfiles profesionales, portafolios visuales y una experiencia premium diseñada para generar confianza."
+  },
+  "nav": {
+    "home": "Inicio",
+    "what_is": "¿Qué es MiTepuy?",
+    "how_it_works": "¿Cómo funciona?",
+    "agents": "Agentes",
+    "need_agent": "¿Necesitas un agente?",
+    "request_access": "Contactanos"
+  },
+  "hero": {
+    "eyebrow": "Infraestructura digital para agentes inmobiliarios",
+    "title": "Convierte tu perfil inmobiliario en una marca confiable",
+    "description": "Creamos experiencias digitales diseñadas para elevar la percepción profesional del agente, fortalecer su reputación y facilitar conexiones más confiables con potenciales compradores e inversionistas.",
+    "explore_agents": "Explorar perfiles",
+    "request_access": "Solicitar acceso"
+  },
+  "about": {
+    "eyebrow": "¿Qué es MiTepuy?",
+    "title": "Infraestructura para agentes modernos.",
+    "description_1": "MiTepuy ayuda a agentes inmobiliarios a construir una presencia digital más elegante, organizada y profesional mediante perfiles premium, portafolios visuales y experiencias diseñadas para transmitir mayor confianza dentro del mercado inmobiliario.",
+    "description_2": "Una mejor presencia digital puede ayudarte a destacar dentro de un mercado altamente competitivo, generar conexiones más confiables y aumentar tus oportunidades de negocio con potenciales compradores e inversionistas.",
+    "button": "Explorar perfiles",
+
+    "cards": {
+      "card_1": {
+        "title": "La percepción importa",
+        "description": "La forma en que presentas tu perfil influye directamente en la confianza que transmites dentro del mercado inmobiliario."
+      },
+      "card_2": {
+        "title": "Tus propiedades comunican",
+        "description": "Una presentación visual organizada y profesional puede ayudarte a destacar dentro de un mercado competitivo."
+      },
+      "card_3": {
+        "title": "La confianza comienza antes",
+        "description": "Perfiles claros, visuales y bien estructurados ayudan a transmitir mayor seriedad y reputación profesional."
+      },
+      "card_4": {
+        "title": "Destacar ya no es opcional",
+        "description": "Los agentes con mejor presencia digital generan experiencias más sólidas, memorables y confiables para sus clientes."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experiencia digital premium",
+    "title": "Organización visual para agentes premium.",
+    "description_1": "MiTepuy organiza perfiles, propiedades y portafolios dentro de una experiencia digital moderna, limpia y visualmente profesional.",
+    "description_2": "Cada agente cuenta con un espacio diseñado para presentar sus publicaciones con mayor claridad, presencia y reputación.",
+    "description_3": "La plataforma prioriza organización visual, identidad profesional y contacto directo entre agentes y clientes.",
+    "button": "Ver perfiles profesionales"
+  },
+  "how_it_works": {
+    "eyebrow": "¿Cómo funciona MiTepuy?",
+    "title": "De agente independiente a marca profesional.",
+    "description_1": "Creamos una estructura digital clara para que cada agente pueda presentar su identidad, experiencia, publicaciones y canales de contacto en un solo espacio profesional.",
+    "description_2": "Cada perfil está diseñado para ordenar la información, elevar la percepción visual y facilitar que clientes potenciales conozcan al agente con mayor confianza.",
+    "description_3": "El resultado es una experiencia más seria, coherente y fácil de compartir, pensada para destacar al agente dentro de un mercado cada vez más visual.",
+    "button": "Solicitar acceso"
+  },
+  "agents": {
+    "eyebrow": "Red de agentes profesionales",
+    "title": "Perfiles inmobiliarios de nueva generación.",
+    "description": "Cada agente forma parte de una experiencia digital diseñada para transmitir mayor confianza, organización y reputación dentro del mercado inmobiliario.",
+    "filters": {
+      "all_states": "Todos los estados",
+      "all_cities": "Todas las ciudades"
+    },
+    "card": {
+      "verified": "Perfil destacado",
+      "view_portfolio": "Explorar perfil",
+      "active_posts_6": "6 publicaciones activas",
+      "active_posts_5": "5 publicaciones activas",
+      "active_posts_4": "4 publicaciones activas",
+      "active_posts_3": "3 publicaciones activas"
+    },
+      "demo": {
+    "badge": "✨ Portal destacado",
+    "title": "Perfil demostración MiTepuy",
+    "description": "Conoce una experiencia inmobiliaria premium diseñada para elevar tu imagen.",
+    "highlight": "Un ejemplo real del estándar visual que MiTepuy construye para sus agentes.",
+    "button": "Ver portal demo"
+    }
+  },
+  "agent_modal": {
+    "verified": "Perfil destacado",
+    "view_full_profile": "Ver perfil profesional",
+    "active_listings": "Portafolio activo"
+  },
+  "vision": {
+    "eyebrow": "Nuestra visión",
+    "title": "Una nueva forma de construir reputación.",
+    "description_1": "MiTepuy nace como una infraestructura digital orientada a transformar la manera en que los agentes independientes presentan su imagen, experiencia y portafolio dentro del mercado inmobiliario.",
+    "description_2": "Nuestra visión es impulsar una experiencia más organizada, confiable y visualmente profesional, donde la presencia digital se convierta en una herramienta real de reputación, posicionamiento y confianza.",
+    "button": "Solicitar acceso"
+  },
+  "contact": {
+    "eyebrow": "Conecta con MiTepuy",
+    "title": "¡Hablemos!",
+    "description_1": "Ya seas un agente inmobiliario, propietario o inversionista, MiTepuy puede ayudarte a construir conexiones más organizadas, profesionales y alineadas con una experiencia digital de mayor nivel.",
+    "description_2": "Nuestro equipo puede orientarte, ayudarte a encontrar perfiles profesionales dentro de la plataforma o brindarte información sobre cómo formar parte del ecosistema MiTepuy.",
+
+    "form": {
+      "title": "Contáctanos",
+      "full_name": "Nombre completo",
+      "email": "Correo electrónico",
+      "whatsapp": "WhatsApp",
+      "city_state": "Ciudad / Estado",
+      "message": "Cuéntanos cómo podemos ayudarte",
+      "button": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "description": "Infraestructura digital orientada a fortalecer la presencia profesional de agentes inmobiliarios independientes mediante branding, organización visual y experiencias digitales más confiables.",
+    "navigation": "Navegación",
+    "home": "Inicio",
+    "what_is": "¿Qué es MiTepuy?",
+    "how_it_works": "¿Cómo funciona?",
+    "agents": "Agentes",
+    "contact": "Contacto",
+    "request_access": "Solicitar acceso",
+    "copyright": "© 2026 MiTepuy. Todos los derechos reservados.",
+    "signature": "Diseñado para elevar la presencia digital inmobiliaria."
+  },
+  "agents_data": [
+    {
+      "name": "Marianela Castillo",
+      "location": "Lechería, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_1.webp",
+      "description": "Especialista en propiedades premium y oportunidades inmobiliarias en el estado Anzoátegui.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/01_publicacion/p_1_1.webp",
+          "type": "Venta",
+          "title": "Penthouse frente al mar",
+          "location": "Lechería, Estado Anzoátegui",
+          "price": "$ 185.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/02_publicacion/p_2_1.webp",
+          "type": "Alquiler",
+          "title": "Apartamento ejecutivo",
+          "location": "Chacao, Estado Miranda",
+          "price": "$ 2.500 / mes"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/03_publicacion/p_3_1.webp",
+          "type": "Venta",
+          "title": "Terreno en Pampatar",
+          "location": "Isla de Margarita",
+          "price": "$ 190.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/04_publicacion/p_4_1.webp",
+          "type": "Venta",
+          "title": "Mansión waterfront",
+          "location": "Lechería, Estado Anzoátegui",
+          "price": "$ 2.850.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/05_publicacion/p_5_1.webp",
+          "type": "Venta",
+          "title": "Range Rover 2026",
+          "location": "Maturín, Estado Monagas",
+          "price": "$ 75,000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/06_publicacion/p_6_1.webp",
+          "type": "Experiencia VIP",
+          "title": "Experiencia náutica",
+          "location": "Cayo Sal, Morrocoy",
+          "price": "Desde $ 800/día"
+        }
+      ]
+    },
+    {
+      "name": "Andrea Salazar",
+      "location": "Barcelona, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_2.webp",
+      "description": "Asesor inmobiliario enfocado en propiedades familiares y oportunidades de inversión.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_3/p_3_1.png",
+          "type": "Venta",
+          "title": "Residencia familiar",
+          "location": "Barcelona, Anzoátegui",
+          "price": "$250,000"
+        }
+      ]
+    },
+    {
+      "name": "Carlos Méndez",
+      "location": "Puerto La Cruz, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_3.webp",
+      "description": "Agente inmobiliario especializado en propiedades residenciales, comerciales y activos premium.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_5/p_5_1.png",
+          "type": "Venta",
+          "title": "Propiedad premium",
+          "location": "Puerto La Cruz, Anzoátegui",
+          "price": "$350,000"
+        }
+      ]
+    },
+    {
+      "name": "Valeria Rivas",
+      "location": "Margarita, Nueva Esparta",
+      "image": "./assets/06_demo_carrusel/agente_index_4.webp",
+      "description": "Asesora inmobiliaria enfocada en propiedades vacacionales, inversión y activos frente al mar.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_6/p_6_1.png",
+          "type": "Experiencia VIP",
+          "title": "Experiencia náutica premium",
+          "location": "Nueva Esparta",
+          "price": "Desde $1,200/día"
+        }
+      ]
+    }
+  ],
+  "need_agent": {
+    "eyebrow": "¿Necesitas un agente?",
+    "title": "Encuentra el agente adecuado.",
+    "description_1": "Si deseas vender, alquilar o promocionar una propiedad, MiTepuy puede ayudarte a encontrar agentes inmobiliarios con presencia digital organizada, experiencia visual profesional y una imagen más sólida dentro del mercado.",
+    "description_2": "Nuestro objetivo es facilitar conexiones más confiables entre propietarios, inversionistas y agentes independientes mediante una red cuidadosamente presentada y orientada a elevar la experiencia inmobiliaria digital.",
+    "description_3": "Podemos orientarte y mostrarte perfiles profesionales dentro de nuestra plataforma para ayudarte a encontrar el agente más adecuado según tu ciudad, tipo de propiedad y necesidades.",
+    "button": "Contáctanos"
+  }
+}

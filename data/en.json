@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "MiTepuy | Premium Digital Presence for Real Estate Agents",
+    "description": "MiTepuy empowers independent real estate agents through professional profiles, visual portfolios and a premium experience designed to inspire trust."
+  },
+
+  "nav": {
+    "home": "Home",
+    "what_is": "What is MiTepuy?",
+    "how_it_works": "How does it work?",
+    "agents": "Agents",
+    "need_agent": "Need an agent?",
+    "request_access": "Contact Us"
+  },
+
+  "hero": {
+    "eyebrow": "Digital infrastructure for real estate agents",
+    "title": "Turn your real estate profile into a trusted brand",
+    "description": "We create digital experiences designed to elevate the agent’s professional perception, strengthen their reputation and facilitate more trustworthy connections with potential buyers and investors.",
+    "explore_agents": "Explore Profiles",
+    "request_access": "Request Access"
+  },
+
+  "about": {
+    "eyebrow": "What is MiTepuy?",
+    "title": "Infrastructure for modern agents.",
+    "description_1": "MiTepuy helps real estate agents build a more elegant, organized and professional digital presence through premium profiles, visual portfolios and experiences designed to inspire greater trust within the real estate market.",
+    "description_2": "A stronger digital presence can help you stand out in a highly competitive market, create more trustworthy connections and increase your business opportunities with potential buyers and investors.",
+    "button": "Explore Profiles",
+
+    "cards": {
+      "card_1": {
+        "title": "Perception matters",
+        "description": "The way you present your profile directly influences the trust you communicate within the real estate market."
+      },
+      "card_2": {
+        "title": "Your properties communicate",
+        "description": "An organized and professional visual presentation can help you stand out in a competitive market."
+      },
+      "card_3": {
+        "title": "Trust begins earlier",
+        "description": "Clear, visual and well-structured profiles help communicate stronger professionalism and reputation."
+      },
+      "card_4": {
+        "title": "Standing out is no longer optional",
+        "description": "Agents with stronger digital presence create more solid, memorable and trustworthy experiences for their clients."
+      }
+    }
+  },
+
+  "experience": {
+    "eyebrow": "Premium digital experience",
+    "title": "Visual organization for premium agents.",
+    "description_1": "MiTepuy organizes profiles, properties and portfolios within a modern, clean and visually professional digital experience.",
+    "description_2": "Each agent has a dedicated space designed to present listings with greater clarity, presence and reputation.",
+    "description_3": "The platform prioritizes visual organization, professional identity and direct connection between agents and clients.",
+    "button": "View Professional Profiles"
+  },
+
+  "how_it_works": {
+    "eyebrow": "How does MiTepuy work?",
+    "title": "From independent agent to professional brand.",
+    "description_1": "We create a clear digital structure so each agent can present their identity, experience, listings and contact channels within a single professional space.",
+    "description_2": "Each profile is designed to organize information, elevate visual perception and help potential clients discover the agent with greater confidence.",
+    "description_3": "The result is a more serious, coherent and shareable experience designed to help agents stand out in an increasingly visual market.",
+    "button": "Request Access"
+  },
+
+  "agents": {
+    "eyebrow": "Professional agent network",
+    "title": "Next-generation real estate profiles.",
+    "description": "Each agent is part of a digital experience designed to communicate greater trust, organization and reputation within the real estate market.",
+
+    "filters": {
+      "all_states": "All States",
+      "all_cities": "All Cities"
+    },
+
+    "card": {
+      "verified": "Featured Profile",
+      "view_portfolio": "Explore Profile",
+      "active_posts_6": "6 active listings",
+      "active_posts_5": "5 active listings",
+      "active_posts_4": "4 active listings",
+      "active_posts_3": "3 active listings"
+    },
+
+    "demo": {
+      "badge": "✨ Featured Portal",
+      "title": "MiTepuy Demo Profile",
+      "description": "Discover a premium real estate experience designed to elevate your professional image.",
+      "highlight": "A real example of the visual standard MiTepuy creates for its agents.",
+      "button": "View Demo Portal"
+    }
+  },
+
+  "agent_modal": {
+    "verified": "Featured Profile",
+    "view_full_profile": "View Professional Profile",
+    "active_listings": "Active Portfolio"
+  },
+
+  "vision": {
+    "eyebrow": "Our Vision",
+    "title": "A new way to build reputation.",
+    "description_1": "MiTepuy was created as a digital infrastructure focused on transforming how independent agents present their image, experience and portfolio within the real estate market.",
+    "description_2": "Our vision is to promote a more organized, trustworthy and visually professional experience where digital presence becomes a real tool for reputation, positioning and trust.",
+    "button": "Request Access"
+  },
+
+  "contact": {
+    "eyebrow": "Connect with MiTepuy",
+    "title": "Let’s Talk!",
+    "description_1": "Whether you are a real estate agent, property owner or investor, MiTepuy can help you build more organized, professional connections aligned with a higher-level digital experience.",
+    "description_2": "Our team can guide you, help you find professional profiles within the platform or provide information about becoming part of the MiTepuy ecosystem.",
+
+    "form": {
+      "title": "Contact Us",
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "whatsapp": "WhatsApp",
+      "city_state": "City / State",
+      "message": "Tell us how we can help you",
+      "button": "Send Message"
+    }
+  },
+
+  "footer": {
+    "description": "Digital infrastructure focused on strengthening the professional presence of independent real estate agents through branding, visual organization and more trustworthy digital experiences.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "what_is": "What is MiTepuy?",
+    "how_it_works": "How does it work?",
+    "agents": "Agents",
+    "contact": "Contact",
+    "request_access": "Request Access",
+    "copyright": "© 2026 MiTepuy. All rights reserved.",
+    "signature": "Designed to elevate digital real estate presence."
+  },
+
+  "agents_data": [
+    {
+      "name": "Marianela Castillo",
+      "location": "Lechería, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_1.webp",
+      "description": "Specialist in premium properties and real estate opportunities in Anzoátegui state.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/01_publicacion/p_1_1.webp",
+          "type": "For Sale",
+          "title": "Oceanfront Penthouse",
+          "location": "Lechería, Anzoátegui State",
+          "price": "$ 185.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/02_publicacion/p_2_1.webp",
+          "type": "For Rent",
+          "title": "Executive Apartment",
+          "location": "Chacao, Miranda State",
+          "price": "$ 2.500 / month"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/03_publicacion/p_3_1.webp",
+          "type": "For Sale",
+          "title": "Land in Pampatar",
+          "location": "Margarita Island",
+          "price": "$ 190.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/04_publicacion/p_4_1.webp",
+          "type": "For Sale",
+          "title": "Waterfront Mansion",
+          "location": "Lechería, Anzoátegui State",
+          "price": "$ 2.850.000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/05_publicacion/p_5_1.webp",
+          "type": "For Sale",
+          "title": "Range Rover 2026",
+          "location": "Maturín, Monagas State",
+          "price": "$ 75,000"
+        },
+        {
+          "image": "./agentes/demostracion/assets/images/03_publicaciones/06_publicacion/p_6_1.webp",
+          "type": "VIP Experience",
+          "title": "Nautical Experience",
+          "location": "Cayo Sal, Morrocoy",
+          "price": "Starting at $ 800/day"
+        }
+      ]
+    },
+    {
+      "name": "Andrea Salazar",
+      "location": "Barcelona, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_2.webp",
+      "description": "Real estate advisor focused on family properties and investment opportunities.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_3/p_3_1.png",
+          "type": "Sale",
+          "title": "Family Residence",
+          "location": "Barcelona, Anzoátegui",
+          "price": "$250,000"
+        }
+      ]
+    },
+    {
+      "name": "Carlos Méndez",
+      "location": "Puerto La Cruz, Anzoátegui",
+      "image": "./assets/06_demo_carrusel/agente_index_3.webp",
+      "description": "Real estate agent specialized in residential, commercial and premium assets.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_5/p_5_1.png",
+          "type": "Sale",
+          "title": "Premium Property",
+          "location": "Puerto La Cruz, Anzoátegui",
+          "price": "$350,000"
+        }
+      ]
+    },
+    {
+      "name": "Valeria Rivas",
+      "location": "Margarita, Nueva Esparta",
+      "image": "./assets/06_demo_carrusel/agente_index_4.webp",
+      "description": "Real estate advisor focused on vacation properties, investments and waterfront assets.",
+      "profileUrl": "./agentes/demostracion/demostracion.html",
+      "properties": [
+        {
+          "image": "./assets/global/images/index/carrusel/publicidad_6/p_6_1.png",
+          "type": "VIP Experience",
+          "title": "Premium Nautical Experience",
+          "location": "Nueva Esparta",
+          "price": "From $1,200/day"
+        }
+      ]
+    }
+  ],
+
+  "need_agent": {
+    "eyebrow": "Need an agent?",
+    "title": "Find the right agent.",
+    "description_1": "If you want to sell, rent or promote a property, MiTepuy can help you find real estate agents with organized digital presence, professional visual experience and a stronger image within the market.",
+    "description_2": "Our goal is to facilitate more trustworthy connections between property owners, investors and independent agents through a carefully presented network focused on elevating the digital real estate experience.",
+    "description_3": "We can guide you and show you professional profiles within our platform to help you find the most suitable agent according to your city, property type and needs.",
+    "button": "Contact Us"
+  }
+}

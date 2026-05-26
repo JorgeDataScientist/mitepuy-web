@@ -1,0 +1,2606 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+  --bg: #f2f4f7;
+  --white: #ffffff;
+  --black: #0b1d2d;
+  --dark: #081d2d;
+  --text: #2a2e33;
+  --muted: #5a6877;
+
+  --primary: #0b1d2d;
+  --secondary: #1c3a52;
+  --slate: #5a6877;
+  --mist: #aeb6c1;
+  --copper: #b8735a;
+  --charcoal: #2a2e33;
+  --cloud: #f2f4f7;
+
+  --accent: var(--copper);
+
+  --border: rgba(174, 182, 193, 0.22);
+  --soft-border: #d8dee6;
+  --shadow: 0 24px 70px rgba(11, 29, 45, 0.18);
+  --radius: 22px;
+  --container: 1180px;
+}
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container);
+  margin: auto;
+}
+
+/* ======================================================
+   MITEPUY — CSS LIMPIO Y RESPONSIVE ORGANIZADO
+   Archivo generado para reemplazar el bloque compartido.
+====================================================== */
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(8, 29, 45, 0.86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.logo img {
+  width: 150px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--accent);
+}
+
+.nav-button {
+  padding: 11px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent) !important;
+}
+
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =========================
+   LANGUAGE TOGGLE
+========================= */
+
+.language-toggle {
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: var(--white);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.language-toggle:hover {
+  border-color: var(--accent);
+
+  color: var(--accent);
+
+  background: rgba(184, 115, 90, 0.1);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 880px;
+
+  padding-top: 82px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 18% 42%,
+      rgba(184, 115, 90, 0.1),
+      transparent 34%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 29, 45, 0.94) 0%,
+      rgba(8, 29, 45, 0.88) 28%,
+      rgba(8, 29, 45, 0.66) 52%,
+      rgba(8, 29, 45, 0.46) 72%,
+      rgba(8, 29, 45, 0.68) 100%
+    ),
+    url("../assets/03_hero/fondo_hero.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(8, 29, 45, 0.08) 0%,
+    transparent 38%,
+    rgba(8, 29, 45, 0.7) 100%
+  );
+
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+
+  background-size: 72px 72px;
+
+  opacity: 0.14;
+
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 82% 18%,
+    rgba(174, 182, 193, 0.07),
+    transparent 32%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  padding: 76px 0 112px;
+}
+
+.hero-text {
+  max-width: 680px;
+
+  color: var(--white);
+}
+
+/* =========================
+   HERO EYEBROW
+========================= */
+
+.eyebrow {
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: var(--accent);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-shadow: 0 0 18px rgba(184, 115, 90, 0.18);
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero h1 {
+  max-width: 680px;
+
+  color: var(--white);
+
+  font-size: clamp(3.4rem, 5.4vw, 5.4rem);
+  font-weight: 800;
+
+  line-height: 1;
+  letter-spacing: -3px;
+
+  text-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+}
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero p {
+  max-width: 590px;
+
+  margin: 34px 0 42px;
+
+  color: rgba(242, 244, 247, 0.86);
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================
+   HERO ACTIONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   HERO LIGHT FOLLOW EFFECT
+========================= */
+
+.hero-light-follow {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(184, 115, 90, 0.18),
+    rgba(184, 115, 90, 0.08) 12%,
+    transparent 34%
+  );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease,
+    background 0.08s linear;
+}
+
+.hero:hover .hero-light-follow {
+  opacity: 1;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  color: var(--white);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-dark {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* =================================================================
+   INTRO
+==================================================================== */
+
+.intro-section {
+  position: relative;
+
+  padding: 110px 0 20px;
+
+  background: linear-gradient(180deg, #f7f8fb 0%, #ffffff 100%);
+
+  overflow: hidden;
+}
+
+/* =========================
+   INTRO GRID
+========================= */
+
+.intro-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 70px;
+  align-items: center;
+
+  margin-bottom: 70px;
+}
+
+/* =========================
+   INTRO IMAGES
+========================= */
+
+.intro-images {
+  position: relative;
+
+  min-height: 520px;
+}
+
+/* =========================
+   GLOW
+========================= */
+
+.intro-glow {
+  position: absolute;
+
+  left: 40px;
+  bottom: 20px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 999px;
+
+  background: rgba(184, 115, 90, 0.12);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+/* =========================
+   LARGE IMAGE
+========================= */
+
+.intro-img-large {
+  position: relative;
+  z-index: 2;
+
+  width: 66%;
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 34px 70px rgba(11, 29, 45, 0.12),
+    0 10px 22px rgba(11, 29, 45, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.intro-img-large:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 48px 90px rgba(11, 29, 45, 0.16),
+    0 14px 28px rgba(11, 29, 45, 0.1);
+}
+
+/* =========================
+   SMALL IMAGE
+========================= */
+
+.intro-img-small {
+  position: absolute;
+
+  right: 20px;
+  bottom: 40px;
+
+  z-index: 3;
+
+  width: 42%;
+  height: 240px;
+
+  object-fit: cover;
+
+  border: 12px solid #ffffff;
+  border-radius: 24px;
+
+  box-shadow:
+    0 34px 70px rgba(11, 29, 45, 0.14),
+    0 10px 24px rgba(11, 29, 45, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.intro-img-small:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 48px 90px rgba(11, 29, 45, 0.18),
+    0 14px 28px rgba(11, 29, 45, 0.1);
+}
+
+/* =========================
+   INTRO CONTENT
+========================= */
+
+.intro-content {
+  max-width: 560px;
+}
+
+.intro-content h2,
+.about-content h2,
+.contact-box h2,
+.section-header h2 {
+  color: var(--primary);
+
+  font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+  font-weight: 800;
+
+  line-height: 1.04;
+  letter-spacing: -2px;
+
+  margin-bottom: 24px;
+}
+
+.intro-content p,
+.about-content p,
+.contact-box p,
+.section-header p {
+  color: #536273;
+
+  margin-bottom: 24px;
+
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   INTRO CARDS
+========================= */
+
+.intro-cards {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+/* =========================
+   INTRO REVERSE — EXPERIENCIA DIGITAL
+========================= */
+
+.intro-reverse {
+  padding-top: 105px;
+  padding-bottom: 85px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+}
+
+.intro-reverse .intro-grid {
+  margin-bottom: 0;
+}
+
+.intro-reverse .intro-content {
+  max-width: 590px;
+}
+
+.intro-reverse .intro-content h2 {
+  max-width: 620px;
+
+  font-size: clamp(2.4rem, 3.6vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.intro-reverse .intro-content p {
+  max-width: 540px;
+
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.intro-reverse .intro-images {
+  min-height: 500px;
+}
+
+.intro-reverse .intro-img-large {
+  width: 68%;
+  height: 420px;
+
+  margin-left: auto;
+}
+
+.intro-reverse .intro-img-small {
+  right: auto;
+  left: 0;
+  bottom: 34px;
+
+  width: 42%;
+  height: 230px;
+
+  box-shadow:
+    0 34px 70px rgba(11, 29, 45, 0.14),
+    0 0 52px rgba(184, 115, 90, 0.14);
+}
+
+.intro-reverse .intro-images::after {
+  content: "";
+
+  position: absolute;
+  right: 90px;
+  bottom: 40px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 999px;
+
+  background: rgba(184, 115, 90, 0.12);
+
+  filter: blur(85px);
+
+  pointer-events: none;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.intro-card {
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(11, 29, 45, 0.06);
+
+  box-shadow:
+    0 20px 50px rgba(11, 29, 45, 0.06),
+    0 8px 18px rgba(11, 29, 45, 0.04);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.intro-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(184, 115, 90, 0.22);
+
+  box-shadow:
+    0 34px 70px rgba(11, 29, 45, 0.12),
+    0 12px 26px rgba(11, 29, 45, 0.06);
+}
+
+/* =========================
+   CARD IMAGE
+========================= */
+
+.intro-card img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.intro-card:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.intro-card-content {
+  padding: 24px;
+}
+
+.intro-card-content h3 {
+  margin: 0 0 12px;
+
+  color: var(--primary);
+
+  font-size: 1.08rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+.intro-card-content p {
+  margin: 0;
+
+  color: #5f6b78;
+
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* ======================================================
+   AGENTS SECTION
+========================================================= */
+
+.agents-section {
+  padding: 100px 0;
+
+  background: #f5f7fa;
+}
+
+.agents-section .section-header {
+  max-width: 760px;
+
+  margin-bottom: 48px;
+}
+
+.agents-section .section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.agents-section h2 {
+  max-width: 720px;
+
+  margin-bottom: 20px;
+
+  color: var(--primary);
+
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.section-description {
+  max-width: 700px;
+
+  color: #536273;
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  margin-bottom: 0;
+}
+
+/* ======================================================
+   SHOWCASE LAYOUT
+========================================================= */
+
+.agents-showcase {
+  display: grid;
+
+  grid-template-columns: 340px 1fr;
+
+  gap: 30px;
+
+  align-items: start;
+}
+
+/* ======================================================
+   DEMO CARD
+========================================================= */
+
+.agent-demo-card {
+  width: 100%;
+  max-width: 340px;
+  min-width: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(11, 29, 45, 1) 0%,
+    rgba(18, 38, 56, 1) 100%
+  );
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(184, 115, 90, 0.22);
+
+  box-shadow: 0 18px 40px rgba(11, 29, 45, 0.08);
+
+  transition: 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.agent-demo-card:hover {
+  transform: translateY(-5px);
+}
+
+.agent-demo-image img {
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.agent-demo-content {
+  padding: 20px;
+}
+
+.agent-demo-content span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(184, 115, 90, 0.14);
+
+  color: #d89a7f;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.agent-demo-content h3 {
+  color: var(--white);
+
+  font-size: 1.05rem;
+  line-height: 1.3;
+
+  margin-bottom: 8px;
+}
+
+.agent-demo-content p {
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+
+  margin-bottom: 10px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.agent-demo-content strong {
+  display: -webkit-box;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 0.84rem;
+  line-height: 1.5;
+
+  margin-bottom: 18px;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.agent-demo-content .btn {
+  width: 100%;
+
+  justify-content: center;
+
+  padding: 11px 14px;
+
+  font-size: 0.78rem;
+}
+
+/* ======================================================
+   AGENTS CAROUSEL
+========================================================= */
+
+.agents-carousel-wrapper {
+  position: relative;
+}
+
+.agents-carousel {
+  display: flex;
+
+  gap: 18px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  padding-bottom: 8px;
+}
+
+.agents-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ======================================================
+   AGENT CARD
+========================================================= */
+
+.agent-card {
+  min-width: 230px;
+  max-width: 230px;
+
+  background: var(--white);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(174, 182, 193, 0.12);
+
+  box-shadow:
+    0 12px 30px rgba(11, 29, 45, 0.04);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(184, 115, 90, 0.22);
+
+  box-shadow:
+    0 24px 50px rgba(11, 29, 45, 0.1);
+}
+
+.agent-card img {
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.agent-card-content {
+  padding: 22px 20px 20px;
+}
+
+.agent-card-content span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(184, 115, 90, 0.12);
+
+  color: var(--accent);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.agent-card-content h3 {
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-size: 1.16rem;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+.agent-card-content p {
+  color: #5f6b78;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  margin-bottom: 12px;
+}
+
+.agent-card-content strong {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--primary);
+
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+/* ======================================================
+   BUTTON
+========================================================= */
+
+.agent-card .btn {
+  width: 100%;
+
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+
+  border-radius: 999px;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+
+  box-shadow:
+    0 16px 34px rgba(11, 29, 45, 0.16);
+
+  transition:
+    transform 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.agent-card .btn:hover {
+  transform: translateY(-2px);
+
+  background: var(--accent);
+
+  box-shadow:
+    0 22px 46px rgba(184, 115, 90, 0.26);
+}
+
+.agent-card .btn span {
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* ======================================================
+   CAROUSEL BUTTONS
+========================================================= */
+
+.agents-carousel-btn {
+  position: absolute;
+
+  top: 38%;
+
+  z-index: 5;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.agents-carousel-btn:hover {
+  background: var(--accent);
+}
+
+.agents-prev {
+  left: -18px;
+}
+
+.agents-next {
+  right: -18px;
+}
+
+.agents-carousel-area {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 12px;
+}
+
+.agents-carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.agents-next {
+  right: 0;
+}
+
+.agents-prev {
+  left: 0;
+}
+
+.agents-section {
+  overflow: hidden;
+}
+
+/* =========================
+   AGENT MODAL
+========================= */
+
+.agent-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  padding: 24px;
+}
+
+.agent-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 29, 45, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.agent-modal-content {
+  position: relative;
+  z-index: 2;
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 24px;
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  box-shadow: var(--shadow);
+  padding: 10px;
+}
+
+.agent-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.agent-modal-header {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.agent-modal-header img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+}
+
+.agent-modal-header span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(184, 115, 90, 0.12);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.agent-modal-header h2 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.agent-modal-header p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.agent-modal-properties h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+/* =========================
+   AGENT MODAL — PROPERTIES
+========================= */
+
+.agent-properties-carousel-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0 48px;
+}
+
+.agent-properties-carousel {
+  display: flex;
+  gap: 22px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  padding: 6px 0 12px;
+}
+
+.agent-properties-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.agent-property-card {
+  min-width: 280px;
+  max-width: 280px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(174, 182, 193, 0.16);
+
+  box-shadow:
+    0 18px 42px rgba(11, 29, 45, 0.08);
+
+  flex-shrink: 0;
+}
+
+.agent-property-card img {
+  width: 100%;
+  height: 190px;
+
+  object-fit: cover;
+}
+
+.agent-property-info {
+  padding: 18px;
+}
+
+.agent-property-info span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(184, 115, 90, 0.12);
+
+  color: var(--accent);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.agent-property-info h4 {
+  margin-bottom: 6px;
+
+  color: var(--primary);
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.agent-property-info p {
+  margin-bottom: 10px;
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+}
+
+.agent-property-info strong {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: var(--primary);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.agent-property-info .btn {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 0 16px;
+
+  font-size: 0.78rem;
+}
+
+/* =========================
+   AGENT MODAL — PROPERTY BUTTONS
+========================= */
+
+.agent-properties-btn {
+  position: absolute;
+  top: 50%;
+
+  z-index: 4;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  box-shadow:
+    0 14px 28px rgba(11, 29, 45, 0.22);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.agent-properties-btn:hover {
+  background: var(--accent);
+
+  transform: translateY(-50%) scale(1.05);
+}
+
+.agent-properties-prev {
+  left: 0;
+}
+
+.agent-properties-next {
+  right: 0;
+}
+
+/* =========================
+   ABOUT / VISION SECTION
+========================= */
+
+.about-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background: #f6f8fb;
+
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+  top: -140px;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(184, 115, 90, 0.08) 0%,
+      transparent 72%
+    );
+
+  pointer-events: none;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 560px;
+}
+
+.about-content h2 {
+  color: var(--primary);
+
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+
+  line-height: 1.04;
+  letter-spacing: -2px;
+
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  color: #536273;
+
+  margin-bottom: 24px;
+
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   CONTACT / MEMBERSHIP
+========================= */
+
+.contact-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(184, 115, 90, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #f7f8fb 0%,
+      #eef2f6 100%
+    );
+
+  overflow: hidden;
+}
+
+.contact-box {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 78px;
+
+  padding: 78px;
+
+  border-radius: 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0.88)
+    );
+
+  border: 1px solid rgba(174, 182, 193, 0.22);
+
+  box-shadow:
+    0 40px 110px rgba(11, 29, 45, 0.14),
+    0 14px 34px rgba(11, 29, 45, 0.08);
+}
+
+.membership-content h2 {
+  max-width: 560px;
+
+  color: var(--primary);
+
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  font-weight: 800;
+
+  line-height: 1.04;
+  letter-spacing: -2px;
+
+  margin-bottom: 28px;
+}
+
+.membership-content p {
+  max-width: 540px;
+
+  color: #536273;
+
+  font-size: 1.04rem;
+  line-height: 1.9;
+
+  margin-bottom: 26px;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form h3 {
+  margin-bottom: 8px;
+
+  color: var(--primary);
+
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border: 1px solid rgba(174, 182, 193, 0.42);
+  border-radius: 16px;
+
+  background: #f3f6fa;
+
+  color: var(--text);
+
+  font-size: 0.96rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease,
+    transform 0.28s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  transform: translateY(-1px);
+
+  border-color: rgba(184, 115, 90, 0.5);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(184, 115, 90, 0.1),
+    0 14px 30px rgba(11, 29, 45, 0.08);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
+
+  min-height: 56px;
+
+  margin-top: 2px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a6624b 0%,
+      #b8735a 52%,
+      #d09273 100%
+    );
+
+  color: var(--white);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 18px 42px rgba(184, 115, 90, 0.24);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    filter 0.28s ease;
+}
+
+.contact-form .btn:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.04);
+
+  box-shadow:
+    0 26px 54px rgba(184, 115, 90, 0.32);
+}
+
+/* =============================================
+   FOOTER
+================================================ */
+
+.site-footer {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(184, 115, 90, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #071b2b 0%,
+      #04131f 100%
+    );
+
+  overflow: hidden;
+}
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 0.7fr;
+
+  gap: 70px;
+
+  padding: 90px 0 70px;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+  max-width: 520px;
+}
+
+.footer-logo {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.footer-logo img {
+  width: 170px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.footer-logo span {
+  color: var(--white);
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+  color: rgba(242, 244, 247, 0.72);
+
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.footer-badge {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 26px;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: rgba(242,244,247,0.88);
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.footer-badge span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 12px rgba(184, 115, 90, 0.8);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 10px;
+
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: rgba(242, 244, 247, 0.68);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--accent);
+
+  transform: translateX(4px);
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom-inner {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 24px 0;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  color: rgba(242, 244, 247, 0.5);
+
+  font-size: 0.84rem;
+}
+
+/* ======================================================
+   RESPONSIVE SYSTEM — MITEPUY
+   Breakpoints:
+   - Tablet / Small desktop: max-width 991px
+   - Mobile: max-width 575px
+   - Small mobile: max-width 390px
+====================================================== */
+
+/* ======================================================
+   1. GLOBAL RESPONSIVE BASE
+====================================================== */
+
+@media (max-width: 991px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .header-inner {
+    height: 82px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 88%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .language-toggle {
+    padding: 8px 12px;
+    font-size: 0.72rem;
+  }
+}
+
+/* ======================================================
+   2. HERO RESPONSIVE
+====================================================== */
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+    padding-top: 82px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 29, 45, 0.88) 0%,
+        rgba(8, 29, 45, 0.7) 42%,
+        rgba(8, 29, 45, 0.92) 100%
+      ),
+      url("../assets/03_hero/fondo_hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    padding: 72px 0 92px;
+  }
+
+  .hero-text,
+  .hero h1,
+  .hero p {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 9vw, 4.3rem);
+    line-height: 1.02;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    padding-top: 82px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 29, 45, 0.92) 0%,
+        rgba(8, 29, 45, 0.72) 42%,
+        rgba(8, 29, 45, 0.94) 100%
+      ),
+      url("../assets/03_hero/fondo_hero.webp");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 58px 0 78px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.1rem);
+    line-height: 1.04;
+    letter-spacing: -1.4px;
+  }
+
+  .hero p {
+    margin: 24px 0 34px;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ======================================================
+   3. INTRO SECTION — BASE EDITORIAL RESPONSIVE
+====================================================== */
+
+@media (max-width: 991px) {
+  .intro-section {
+    padding: 86px 0 56px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-bottom: 46px;
+  }
+
+  .intro-images {
+    width: 100%;
+    min-height: 440px;
+  }
+
+  .intro-img-large {
+    width: 72%;
+    height: 390px;
+    margin: 0 auto 0 0;
+    border-radius: 24px;
+  }
+
+  .intro-img-small {
+    right: 6%;
+    bottom: 24px;
+    width: 40%;
+    height: 220px;
+    border: 9px solid #ffffff;
+    border-radius: 22px;
+  }
+
+  .intro-content {
+    max-width: 100%;
+  }
+
+  .intro-content h2,
+  .section-header h2,
+  .contact-box h2 {
+    max-width: 720px;
+    font-size: clamp(2.3rem, 6vw, 3.2rem);
+    line-height: 1.06;
+    letter-spacing: -1.6px;
+  }
+
+  .intro-content p {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 575px) {
+  .intro-section {
+    padding: 68px 0 48px;
+  }
+
+  .intro-grid {
+    gap: 30px;
+    margin-bottom: 28px;
+  }
+
+  .intro-images {
+    min-height: 380px;
+  }
+
+  .intro-img-large {
+    width: 78%;
+    height: 320px;
+    border-radius: 22px;
+  }
+
+  .intro-img-small {
+    right: 0;
+    bottom: 20px;
+    width: 38%;
+    height: 165px;
+    border: 7px solid #ffffff;
+    border-radius: 20px;
+  }
+
+  .intro-glow {
+    left: 20px;
+    bottom: 10px;
+    width: 210px;
+    height: 210px;
+  }
+
+  .eyebrow,
+  .intro-content .eyebrow {
+    margin-bottom: 18px;
+    font-size: 0.66rem;
+    letter-spacing: 3px;
+  }
+
+  .intro-content h2,
+  .section-header h2,
+  .contact-box h2 {
+    font-size: clamp(2.05rem, 9vw, 2.65rem);
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+    margin-bottom: 22px;
+  }
+
+  .intro-content p {
+    font-size: 0.96rem;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .intro-images {
+    min-height: 340px;
+  }
+
+  .intro-img-large {
+    width: 80%;
+    height: 285px;
+  }
+
+  .intro-img-small {
+    right: 0;
+    bottom: 18px;
+    width: 40%;
+    height: 145px;
+  }
+
+  .intro-content h2,
+  .section-header h2,
+  .contact-box h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ======================================================
+   4. INTRO CARDS — ¿QUÉ ES MITEPUY?
+====================================================== */
+
+@media (max-width: 991px) {
+  .intro-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .intro-card img {
+    height: 240px;
+  }
+
+  .intro-card-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .intro-cards {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .intro-card {
+    border-radius: 26px;
+  }
+
+  .intro-card img {
+    height: 230px;
+  }
+
+  .intro-card-content {
+    padding: 24px 22px 26px;
+  }
+
+  .intro-card-content h3 {
+    font-size: 1.22rem;
+    line-height: 1.35;
+  }
+
+  .intro-card-content p {
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+}
+
+@media (max-width: 390px) {
+  .intro-card img {
+    height: 210px;
+  }
+
+  .intro-card-content {
+    padding: 22px 20px 24px;
+  }
+}
+
+/* ======================================================
+   5. INTRO REVERSE — EXPERIENCIA / CÓMO FUNCIONA / VISIÓN
+====================================================== */
+
+@media (max-width: 991px) {
+  .intro-reverse {
+    padding-top: 76px;
+    padding-bottom: 56px;
+  }
+
+  .intro-reverse .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-bottom: 0;
+  }
+
+  .intro-reverse .intro-content {
+    max-width: 100%;
+  }
+
+  .intro-reverse .intro-images {
+    min-height: 420px;
+  }
+
+  .intro-reverse .intro-img-large {
+    width: 72%;
+    height: 380px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .intro-reverse .intro-img-small {
+    left: 0;
+    bottom: 24px;
+    width: 40%;
+    height: 210px;
+    border: 9px solid #ffffff;
+  }
+}
+
+@media (max-width: 575px) {
+  .intro-reverse {
+    padding-top: 54px;
+    padding-bottom: 46px;
+  }
+
+  .intro-reverse .intro-grid {
+    gap: 26px;
+  }
+
+  .intro-reverse .intro-content {
+    order: 1;
+  }
+
+  .intro-reverse .intro-images {
+    order: 2;
+    min-height: 320px;
+    margin-top: 6px;
+  }
+
+  .intro-reverse .intro-content h2 {
+    max-width: 100%;
+    font-size: clamp(2rem, 8vw, 2.65rem);
+    line-height: 1.06;
+    letter-spacing: -1.4px;
+    margin-bottom: 20px;
+  }
+
+  .intro-reverse .intro-content p {
+    font-size: 0.98rem;
+    line-height: 1.82;
+    margin-bottom: 18px;
+  }
+
+  .intro-reverse .intro-content .btn {
+    margin-top: 6px;
+  }
+
+  .intro-reverse .intro-img-large {
+    width: 74%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .intro-reverse .intro-img-small {
+    left: 0;
+    bottom: 18px;
+    width: 38%;
+    height: 150px;
+    border: 7px solid #ffffff;
+  }
+}
+
+@media (max-width: 390px) {
+  .intro-reverse .intro-images {
+    min-height: 285px;
+  }
+
+  .intro-reverse .intro-img-large {
+    height: 265px;
+  }
+
+  .intro-reverse .intro-img-small {
+    height: 135px;
+  }
+
+  .intro-reverse .intro-content h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ======================================================
+   6. AGENTS SECTION — HEADER / SHOWCASE / DEMO CARD
+====================================================== */
+
+@media (max-width: 991px) {
+  .agents-section {
+    padding: 70px 0 64px;
+  }
+
+  .agents-showcase {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .agent-demo-card {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-width: 340px;
+    min-width: 0;
+    margin: 0 auto;
+  }
+
+  .agents-carousel-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .agents-section {
+    padding: 62px 0 56px;
+  }
+
+  .agents-section .section-header {
+    margin-bottom: 34px;
+  }
+
+  .agents-section h2 {
+    font-size: clamp(2.05rem, 9vw, 2.7rem);
+    line-height: 1.08;
+  }
+
+  .section-description {
+    margin-bottom: 0;
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .agent-demo-card {
+    max-width: 320px;
+    border-radius: 24px;
+  }
+
+  .agent-demo-image img {
+    height: 220px;
+  }
+
+  .agent-demo-content {
+    padding: 24px;
+  }
+
+  .agent-demo-content h3 {
+    font-size: 1.28rem;
+  }
+}
+
+/* ======================================================
+   7. AGENTS CAROUSEL — MOBILE
+====================================================== */
+
+@media (max-width: 991px) {
+  .agents-carousel-area {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .agents-carousel {
+    gap: 18px;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .agent-card {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 575px) {
+  .agent-card {
+    min-width: 78%;
+    max-width: 78%;
+  }
+
+  .agent-card img {
+    height: 220px;
+  }
+}
+
+/* ======================================================
+   8. AGENT MODAL RESPONSIVE
+====================================================== */
+
+@media (max-width: 991px) {
+  .agent-modal-content {
+    width: min(720px, 100%);
+  }
+
+  .agent-modal-header {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .agent-modal {
+    padding: 14px;
+  }
+
+  .agent-modal-content {
+    max-height: 92vh;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .agent-modal-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .agent-modal-header img {
+    height: 260px;
+  }
+
+  .agent-modal-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .agent-properties-carousel-wrapper {
+    padding: 0;
+  }
+
+  .agent-properties-btn {
+    display: none;
+  }
+
+  .agent-property-card {
+    min-width: 82%;
+    max-width: 82%;
+  }
+}
+
+/* ======================================================
+   8.1 AGENT MODAL — DESKTOP LOW HEIGHT
+   Target: laptops 1366x768 / pantallas con poca altura
+====================================================== */
+
+@media (min-width: 992px) and (max-height: 800px) {
+  .agent-modal-content {
+    width: min(860px, 92%);
+    max-height: 88vh;
+    padding: 12px 14px;
+  }
+
+  .agent-modal-header {
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: start;
+  }
+
+  .agent-modal-header img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .agent-modal-header h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .agent-modal-header p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .agent-modal-properties {
+    margin-top: 12px;
+  }
+
+  .agent-modal-properties h3 {
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+  }
+
+  .agent-properties-carousel {
+    gap: 16px;
+  }
+
+  .agent-property-card {
+    min-width: 260px;
+  }
+
+  .agent-property-card img {
+    height: 150px;
+  }
+
+  .agent-property-info {
+    padding: 14px;
+  }
+
+  .agent-property-info h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .agent-property-info p,
+  .agent-property-info strong {
+    font-size: 0.88rem;
+  }
+
+  .agent-property-info .btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .agent-properties-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ======================================================
+   9. CONTACT / MEMBERSHIP SECTION
+====================================================== */
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 76px 0;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding: 56px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-section {
+    padding: 42px 0 70px;
+  }
+
+  .contact-box {
+    padding: 34px 24px;
+    border-radius: 28px;
+    margin-top: 0;
+  }
+
+  .membership-content h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .membership-content p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 16px 18px;
+  }
+}
+
+/* ======================================================
+   10. FOOTER RESPONSIVE
+====================================================== */
+
+@media (max-width: 991px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding: 76px 0 58px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-container {
+    padding: 64px 0 46px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-brand p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .footer-badge {
+    align-items: flex-start;
+    border-radius: 20px;
+    line-height: 1.5;
+  }
+
+  .footer-bottom-inner {
+    gap: 10px;
+    padding: 22px 0;
+  }
+}

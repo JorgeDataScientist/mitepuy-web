@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "title": "Professional Profile | MiTepuy",
+    "description": "Premium professional profile developed by MiTepuy. A modern digital platform for agents, advisors, and specialists in asset commercialization.",
+    "keywords": "MiTepuy, real estate agent, premium profile, real estate, broker, properties, real estate advisor, premium assets",
+    "og_title": "Professional Profile | MiTepuy",
+    "og_description": "Premium digital presence for agents and professionals."
+  },
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "services": "Services",
+    "about": "About Me",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cta": "Contact Me"
+  },
+  "hero": {
+    "avatar_alt": "Professional agent photo",
+    "label": "Premium real estate advisor",
+    "name": "Maria Gabriela",
+    "headline": "Specialist in exclusive oceanfront properties",
+    "location": "Lechería, Anzoátegui — Venezuela",
+    "cta_primary": "Contact Me",
+    "cta_whatsapp": "WhatsApp",
+    "follow": "Follow me on:"
+  },
+  "whatsapp": {
+    "number": "+584125550123",
+    "message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+  },
+  "properties": {
+    "eyebrow": "Featured portfolio",
+    "title": "Featured properties",
+    "description": "A curated selection of real estate opportunities carefully presented to support fast, clear, and confident decisions.",
+    "labels": {
+      "beds": "Beds",
+      "baths": "Baths"
+    },
+    "items": [
+      {
+        "status": "For sale",
+        "title": "Oceanfront Penthouse",
+        "location": "Lechería, Anzoátegui State",
+        "price": "$ 185,000",
+        "beds": "4",
+        "baths": "3",
+        "area": "350",
+        "image": "./assets/images/03_publicaciones/01_publicacion/p_1_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/01_publicacion/p_1_1.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_2.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_3.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_4.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_5.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_6.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/01_publicacion/p_1_1.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_2.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_3.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_4.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_5.webp",
+          "./assets/images/03_publicaciones/01_publicacion/p_1_6.webp"
+        ],
+        "description": "Luxury residence with privileged ocean views, premium finishes, and spaces designed for an exclusive residential experience.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      },
+      {
+        "status": "For rent",
+        "title": "Executive Apartment",
+        "location": "Chacao, Miranda State",
+        "price": "$ 2,500 / month",
+        "beds": "3",
+        "baths": "2",
+        "area": "150",
+        "image": "./assets/images/03_publicaciones/02_publicacion/p_2_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/02_publicacion/p_2_1.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_2.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_3.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_4.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_5.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_6.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/02_publicacion/p_2_1.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_2.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_3.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_4.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_5.webp",
+          "./assets/images/03_publicaciones/02_publicacion/p_2_6.webp"
+        ],
+        "description": "Contemporary apartment in a premium area, ideal for executives and clients seeking comfort, elegance, and an excellent location.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      },
+      {
+        "status": "For sale",
+        "title": "Land in Pampatar",
+        "location": "Margarita Island",
+        "price": "$ 190,000",
+        "beds": "0",
+        "baths": "0",
+        "area": "2,360",
+        "image": "./assets/images/03_publicaciones/03_publicacion/p_3_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/03_publicacion/p_3_1.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_2.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_3.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_4.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_5.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_6.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/03_publicacion/p_3_1.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_2.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_3.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_4.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_5.webp",
+          "./assets/images/03_publicaciones/03_publicacion/p_3_6.webp"
+        ],
+        "description": "Premium villa with modern architecture, spacious social areas, and excellent real estate investment potential.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      },
+      {
+        "status": "For sale",
+        "title": "Waterfront Mansion",
+        "location": "Lechería, Anzoátegui",
+        "price": "$ 2,850,000",
+        "beds": "12",
+        "baths": "20",
+        "area": "1,320",
+        "image": "./assets/images/03_publicaciones/04_publicacion/p_4_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/04_publicacion/p_4_1.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_2.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_3.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_4.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_5.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_6.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_7.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_8.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_9.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_10.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/04_publicacion/p_4_1.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_2.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_3.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_4.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_5.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_6.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_7.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_8.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_9.webp",
+          "./assets/images/03_publicaciones/04_publicacion/p_4_10.webp"
+        ],
+        "description": "High-end penthouse with sophisticated finishes, panoramic views, and spaces designed for a premium lifestyle.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      },
+      {
+        "status": "For sale",
+        "title": "Range Rover 2026",
+        "location": "Maturín, Monagas State",
+        "price": "$ 75,000",
+        "beds": "0",
+        "baths": "0",
+        "area": "0",
+        "image": "./assets/images/03_publicaciones/05_publicacion/p_5_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/05_publicacion/p_5_1.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_2.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_3.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_4.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_5.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_6.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/05_publicacion/p_5_1.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_2.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_3.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_4.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_5.webp",
+          "./assets/images/03_publicaciones/05_publicacion/p_5_6.webp"
+        ],
+        "description": "Elegant family property with excellent layout, functional social areas, and a strategic location.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      },
+      {
+        "status": "For rent",
+        "title": "Nautical Experience",
+        "location": "Cayo Sal, Morrocoy",
+        "price": "Starting at $ 800/day",
+        "beds": "1",
+        "baths": "1",
+        "area": "30",
+        "image": "./assets/images/03_publicaciones/06_publicacion/p_6_1.webp",
+        "gallery": [
+          "./assets/images/03_publicaciones/06_publicacion/p_6_1.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_2.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_3.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_4.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_5.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_6.webp"
+        ],
+        "thumbnails": [
+          "./assets/images/03_publicaciones/06_publicacion/p_6_1.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_2.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_3.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_4.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_5.webp",
+          "./assets/images/03_publicaciones/06_publicacion/p_6_6.webp"
+        ],
+        "description": "Premium oceanfront apartment with modern design, exclusive finishes, and a high-end residential experience.",
+        "whatsapp_message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Premium real estate services",
+    "title": "Real estate solutions tailored to your goals",
+    "description": "Professional guidance to buy, sell, rent, or invest with greater clarity, security, and confidence.",
+    "cta": "Contact me",
+    "items": [
+      {
+        "title": "Property Sales",
+        "description": "Strategies to sell your property at the best price and in the shortest possible time.",
+        "extended_description": "I guide you through the entire property sales process, from the initial evaluation to the final negotiation, taking care of presentation, positioning, and communication to maximize the value of the transaction.",
+        "icon": "../../assets/icons/servicios/casa.webp"
+      },
+      {
+        "title": "Property Rentals",
+        "description": "Management to find qualified tenants and close secure rental agreements.",
+        "extended_description": "I help promote, filter, and manage your property rental with professional criteria, prioritizing security, contract clarity, and a reliable experience for both parties.",
+        "icon": "../../assets/icons/servicios/llave.webp"
+      },
+      {
+        "title": "Investment Advisory",
+        "description": "Guidance to identify real estate opportunities with potential.",
+        "extended_description": "I analyze real estate opportunities based on location, asset profile, appreciation potential, and the client’s objectives to support clearer and more strategic investment decisions.",
+        "icon": "../../assets/icons/servicios/edificio.webp"
+      },
+      {
+        "title": "Market Analysis",
+        "description": "Key information to make better-informed real estate decisions.",
+        "extended_description": "I conduct comparative market analyses, reference pricing, and area behavior reviews to help you define realistic strategies for buying, selling, renting, or investing.",
+        "icon": "../../assets/icons/servicios/metrica.webp"
+      },
+      {
+        "title": "Comprehensive Management",
+        "description": "Guidance throughout the legal, commercial, and administrative process.",
+        "extended_description": "I coordinate the main stages of the real estate process, from document organization to commercial and administrative follow-up, so the transaction moves forward with order and transparency.",
+        "icon": "../../assets/icons/servicios/documento.webp"
+      },
+      {
+        "title": "Relocation",
+        "description": "Guidance for national and international moves with greater security.",
+        "extended_description": "I guide clients who need to move or settle in a new area, helping them find properties aligned with their lifestyle, budget, and family or professional needs.",
+        "icon": "../../assets/icons/servicios/mano.webp"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "My story, my commitment",
+    "description_1": "With more than 12 years of experience in the real estate sector, my mission is to help my clients find exceptional properties that fit their lifestyle and investment goals.",
+    "description_2": "I believe in transparency, constant communication, and personalized service that builds trust and delivers results.",
+    "signature": "Maria Gabriela",
+    "story_title": "My journey",
+    "values_title": "What guides me",
+    "cta_primary": "Contact me",
+    "cta_secondary": "View properties",
+    "stats": [
+      {
+        "value": "12+",
+        "label": "Years of experience",
+        "description": "in the real estate market",
+        "icon": "../../assets/icons/sobre_mi/experiencia_icon.webp"
+      },
+      {
+        "value": "500+",
+        "label": "Satisfied clients",
+        "description": "who trust my work",
+        "icon": "../../assets/icons/sobre_mi/clientes_icon.webp"
+      },
+      {
+        "value": "250+",
+        "label": "Properties",
+        "description": "successfully managed exclusively",
+        "icon": "../../assets/icons/sobre_mi/propiedades_icon.webp"
+      },
+      {
+        "value": "Local presence",
+        "label": "Lechería, Anzoátegui",
+        "description": "Venezuela",
+        "icon": "../../assets/icons/sobre_mi/ubicacion_icon.webp"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Experience matters",
+    "title": "What my clients say",
+    "description": "Every review reflects my commitment, dedication, and passion for finding the best real estate opportunities.",
+    "reviews_label_dynamic": "Based on {count} reviews",
+    "verified_label": "Verified testimonials",
+    "cta": "Contact me",
+    "items": [
+      {
+        "name": "María Fernanda R.",
+        "location": "Lechería, Anzoátegui",
+        "rating": 3,
+        "text": "Maria Gabriela understood exactly what I was looking for. He guided me throughout the entire process and I found the perfect oceanfront home. 100% recommended!",
+        "tag": "Home in Playa Lido",
+        "photo": "./assets/images/06_testimonios/testimonio_1.webp",
+        "icon": "../../assets/icons/servicios/casa.webp"
+      },
+      {
+        "name": "Andrés Gómez",
+        "location": "Caracas, Capital District",
+        "rating": 5,
+        "text": "His guidance was key to making a safe and profitable investment. Professional, transparent, and always available.",
+        "tag": "Apartment in Lechería",
+        "photo": "./assets/images/06_testimonios/testimonio_2.webp",
+        "icon": "../../assets/icons/servicios/edificio.webp"
+      },
+      {
+        "name": "Isabella De Luca",
+        "location": "Maracaibo, Zulia",
+        "rating": 2,
+        "text": "Excellent service and attention to detail. They helped me with the entire process from beginning to end. I will definitely work with him again.",
+        "tag": "Commercial Investment",
+        "photo": "./assets/images/06_testimonios/testimonio_3.webp",
+        "icon": "../../assets/icons/servicios/metrica.webp"
+      },
+      {
+        "name": "Ricardo Materán",
+        "location": "Puerto La Cruz, Anzoátegui",
+        "rating": 4,
+        "text": "Great market knowledge and excellent options. I managed to sell my property faster than expected and at the best price.",
+        "tag": "Property Sale",
+        "photo": "./assets/images/06_testimonios/testimonio_4.webp",
+        "icon": "../../assets/icons/servicios/llave.webp"
+      },
+      {
+        "name": "Ana Gabriela Torres",
+        "location": "Barcelona, Anzoátegui",
+        "rating": 5,
+        "text": "I received close, clear, and very professional attention. Every recommendation was aligned with what I truly needed.",
+        "tag": "Residential Purchase",
+        "photo": "./assets/images/06_testimonios/testimonio_5.webp",
+        "icon": "../../assets/icons/servicios/casa.webp"
+      },
+      {
+        "name": "Luis Salazar",
+        "location": "Valencia, Carabobo",
+        "rating": 5,
+        "text": "Thanks to Maria Gabriela, I found an investment opportunity with excellent projection. His judgment gave me great confidence.",
+        "tag": "Real Estate Investment",
+        "photo": "./assets/images/06_testimonios/testimonio_6.webp",
+        "icon": "../../assets/icons/servicios/metrica.webp"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Your next home starts here",
+    "title": "Find the ideal property with confidence and professional guidance",
+    "description": "Receive personalized attention, fast responses, and access to carefully selected real estate opportunities.",
+    "direct_title": "Direct contact",
+    "whatsapp": {
+      "label": "Message me on WhatsApp",
+      "description": "Replies within minutes",
+      "number": "+584125550123",
+      "url": "https://wa.me/584125550123",
+      "message": "Hello Maria Gabriela, I hope you're doing well.\n\nI found your professional profile through mitepuy.com and I would like to speak with you about a property that caught my interest in your portfolio.\n\nI would appreciate learning more details, availability, and any additional information you consider relevant.\n\nI look forward to your response. Thank you very much.",
+      "icon": "../../assets/icons/contactame/icon_whatsapp.webp"
+    },
+    "phone_cta": {
+      "eyebrow": "Prefer to call?",
+      "label": "Let's talk directly",
+      "number": "+58 412 555 0123",
+      "url": "tel:+584125550123",
+      "icon": "../../assets/icons/contactame/telefono.webp"
+    },
+    "benefits": [
+      {
+        "title": "Fast response",
+        "description": "attention within minutes",
+        "icon": "../../assets/icons/contactame/respuesta_rapida.webp"
+      },
+      {
+        "title": "Personalized guidance",
+        "description": "close and professional support",
+        "icon": "../../assets/icons/contactame/atencion_personalizada.webp"
+      },
+      {
+        "title": "Secure information",
+        "description": "protected and confidential data",
+        "icon": "../../assets/icons/contactame/informacion_segura.webp"
+      },
+      {
+        "title": "Results-focused",
+        "description": "real commitment to your goals",
+        "icon": "../../assets/icons/contactame/enfoque_en_resultado.webp"
+      }
+    ],
+    "direct": [
+      {
+        "title": "Phone",
+        "value": "+58 412 555 0123",
+        "href": "tel:+584125550123",
+        "icon": "../../assets/icons/contactame/telefono.webp"
+      },
+      {
+        "title": "Email",
+        "value": "Gaby@mitepuy.com",
+        "href": "mailto:Gaby@mitepuy.com",
+        "icon": "../../assets/icons/contactame/mail.webp"
+      },
+      {
+        "title": "Location",
+        "value": "Lechería, Anzoátegui\nVenezuela",
+        "href": "#",
+        "icon": "../../assets/icons/contactame/ubicacion.webp"
+      },
+      {
+        "title": "Business hours",
+        "value": "Monday to Friday\n9:00 AM – 6:00 PM",
+        "href": "#",
+        "icon": "../../assets/icons/contactame/reloj.webp"
+      }
+    ],
+    "privacy_note": "Your information is completely confidential and protected. We never share your data with third parties."
+  },
+
+  "footer": {
+    "description": "Premium digital platform designed to professionalize the online presence of independent real estate agents.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "location": "Lechería, Anzoátegui · Venezuela",
+    "copyright": "© 2026 MiTepuy. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

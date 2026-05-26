@@ -1,0 +1,4776 @@
+/* =========================================================
+   AGENT.CSS — MITEPUY AGENT PROFILE
+   Versión organizada, consolidada y optimizada.
+   Objetivo:
+   - Mantener estética premium/luxury.
+   - Corregir consistencia del header con la página principal.
+   - Reducir inconsistencias responsive.
+   - Mantener compatibilidad con HTML/JS existentes.
+========================================================= */
+
+/* =========================================================
+   HEADER / NAVBAR — MITEPUY AGENT PROFILE
+   Descripción:
+   Sistema de navegación premium, sticky, responsive,
+   con estética luxury-tech y soporte visual multilenguaje.
+========================================================= */
+
+:root {
+  --midnight-blue: #0b1d2d;
+  --deep-mineral-blue: #1c3a52;
+  --atmospheric-blue: #5a6877;
+  --cold-silver: #aeb6c1;
+  --copper-metallic: #b8735a;
+  --volcanic-black: #2a2e33;
+  --mist-gray: #6e7680;
+  --cloud-white: #f2f4f7;
+
+  --bg-dark: #050b12;
+  --bg-glass: rgba(8, 18, 31, 0.82);
+  --border-glass: rgba(184, 115, 90, 0.32);
+  --shadow-premium: 0 24px 80px rgba(0, 0, 0, 0.45);
+
+  --font-main:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --header-height: 82px;
+}
+
+/* RESET BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  background: var(--bg-dark);
+  color: var(--cloud-white);
+  padding-top: var(--header-height);
+}
+
+/* =========================================================
+   HEADER BASE
+========================================================= */
+
+.agent-header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: var(--bg-glass);
+  border-bottom: 1px solid rgba(174, 182, 193, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.32);
+  transition: transform 0.28s ease;
+}
+
+.agent-header.is-hidden-mobile {
+  transform: translateY(-100%);
+}
+
+@media (min-width: 769px) {
+  .agent-header.is-hidden-mobile {
+    transform: translateY(0);
+  }
+}
+
+.agent-navbar {
+  width: min(100% - 48px, 1440px);
+  height: var(--header-height);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* =========================================================
+   LOGO / BRAND
+========================================================= */
+
+.agent-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--cloud-white);
+  min-width: max-content;
+}
+
+.agent-brand-logo {
+  width: 150px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+.agent-brand-name {
+  display: none;
+}
+
+.agent-brand-name span {
+  color: var(--copper-metallic);
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.agent-nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  flex: 1;
+}
+
+.agent-nav-link {
+  position: relative;
+  color: var(--cloud-white);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  padding: 10px 0;
+  transition: color 0.25s ease;
+}
+
+.agent-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: var(--copper-metallic);
+  transition: width 0.25s ease;
+}
+
+.agent-nav-link:hover,
+.agent-nav-link.active {
+  color: var(--copper-metallic);
+}
+
+.agent-nav-link:hover::after,
+.agent-nav-link.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   ACTIONS / LANGUAGE / CTA
+========================================================= */
+
+.agent-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: max-content;
+}
+
+.agent-language {
+  position: relative;
+}
+
+.agent-language-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: var(--cloud-white);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding: 10px 4px;
+}
+
+.agent-language-icon {
+  color: var(--copper-metallic);
+  font-size: 0.95rem;
+}
+
+.agent-language-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 92px;
+  padding: 8px;
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  background: rgba(5, 11, 18, 0.96);
+  box-shadow: var(--shadow-premium);
+  display: none;
+}
+
+.agent-language-menu.is-open {
+  display: grid;
+  gap: 4px;
+}
+
+.agent-language-menu button {
+  border: 0;
+  background: transparent;
+  color: var(--cloud-white);
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.agent-language-menu button:hover {
+  background: rgba(184, 115, 90, 0.14);
+  color: var(--copper-metallic);
+}
+
+.agent-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #b8735a, #d27a32);
+  color: var(--cloud-white);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(184, 115, 90, 0.28);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.agent-nav-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 18px 42px rgba(184, 115, 90, 0.38);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.agent-menu-toggle {
+  width: 44px;
+  height: 44px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid rgba(184, 115, 90, 0.34);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.agent-menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background: var(--cloud-white);
+  border-radius: 99px;
+}
+
+/* =========================================================
+   MOBILE PANEL
+========================================================= */
+
+.agent-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(2, 6, 12, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.agent-mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.agent-mobile-panel {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: min(360px, calc(100% - 36px));
+  padding: 22px;
+  border: 1px solid var(--border-glass);
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(11, 29, 45, 0.96),
+    rgba(5, 11, 18, 0.98)
+  );
+  box-shadow: var(--shadow-premium);
+  transform: translateX(24px);
+  transition: transform 0.25s ease;
+}
+
+.agent-mobile-menu.is-open .agent-mobile-panel {
+  transform: translateX(0);
+}
+
+.agent-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(174, 182, 193, 0.14);
+}
+
+.agent-mobile-close {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(184, 115, 90, 0.34);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--cloud-white);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.agent-mobile-nav {
+  display: grid;
+  gap: 8px;
+  padding: 22px 0;
+}
+
+.agent-mobile-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 4px;
+  color: var(--cloud-white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.agent-mobile-nav a::after {
+  content: "›";
+  color: var(--copper-metallic);
+  font-size: 1.4rem;
+}
+
+.agent-mobile-nav a:hover {
+  color: var(--copper-metallic);
+}
+
+.agent-mobile-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border: 1px solid var(--copper-metallic);
+  border-radius: 10px;
+  color: var(--cloud-white);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+  .agent-nav-desktop {
+    gap: 22px;
+  }
+
+  .agent-nav-link {
+    font-size: 0.76rem;
+  }
+
+  .agent-nav-cta {
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 980px) {
+  :root {
+    --header-height: 82px;
+  }
+
+  .agent-navbar {
+    width: min(100% - 32px, 1440px);
+  }
+
+  .agent-nav-desktop,
+  .agent-nav-cta {
+    display: none;
+  }
+
+  .agent-menu-toggle {
+    display: inline-flex;
+  }
+
+  .agent-brand-logo {
+    width: 150px;
+    height: 42px;
+  }
+
+  .agent-brand-name {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .agent-navbar {
+    width: min(100% - 24px, 1440px);
+  }
+
+  .agent-brand-logo {
+    width: 136px;
+    height: 38px;
+  }
+
+  .agent-brand-name {
+    display: none;
+  }
+
+  .agent-language-btn {
+    font-size: 0.78rem;
+  }
+
+  .agent-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .agent-mobile-panel {
+    top: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   END HEADER / NAVBAR
+========================================================= */
+
+/* =========================================================
+   HERO SECTION — MITEPUY AGENT PROFILE
+   Descripción:
+   Hero premium con imagen de fondo, overlay oscuro,
+   presentación del agente, CTA, ubicación y redes sociales.
+========================================================= */
+
+.agent-hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, 0.78) 0%,
+      rgba(5, 11, 18, 0.62) 34%,
+      rgba(5, 11, 18, 0.28) 68%,
+      rgba(5, 11, 18, 0.52) 100%
+    ),
+    url("../agentes/demostracion/assets/images/01_hero/hero-bg.webp") center/cover
+      no-repeat;
+}
+
+.agent-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(184, 115, 90, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(180deg, rgba(5, 11, 18, 0.18), rgba(5, 11, 18, 0.92));
+  pointer-events: none;
+}
+
+.agent-hero-container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.agent-hero-content {
+  max-width: 620px;
+}
+
+.agent-hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.agent-hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--copper-metallic);
+  box-shadow:
+    0 0 0 6px rgba(184, 115, 90, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.42);
+}
+
+.agent-hero-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--copper-metallic);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.agent-hero-title {
+  margin: 0;
+  color: var(--cloud-white);
+  font-size: clamp(2.4rem, 5vw, 4.9rem);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.agent-hero-divider {
+  width: 220px;
+  height: 2px;
+  margin: 30px 0 28px;
+  background: linear-gradient(
+    90deg,
+    var(--copper-metallic),
+    rgba(184, 115, 90, 0)
+  );
+}
+
+.agent-hero-headline {
+  max-width: 560px;
+  margin: 0 0 28px;
+  color: var(--cloud-white);
+  font-size: clamp(1.65rem, 3.2vw, 3rem);
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.agent-hero-location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 34px;
+  color: rgba(242, 244, 247, 0.86);
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.agent-hero-icon {
+  color: var(--copper-metallic);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.agent-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.agent-hero-btn {
+  min-width: 196px;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.agent-hero-btn-primary {
+  background: linear-gradient(135deg, #b8735a, #d27a32);
+  color: var(--cloud-white);
+  box-shadow: 0 18px 46px rgba(184, 115, 90, 0.28);
+}
+
+.agent-hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 60px rgba(184, 115, 90, 0.38);
+}
+
+.agent-hero-btn-outline {
+  border: 1px solid rgba(184, 115, 90, 0.72);
+  color: var(--cloud-white);
+  background: rgba(5, 11, 18, 0.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.agent-hero-btn-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(184, 115, 90, 0.12);
+}
+
+.agent-hero-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgba(242, 244, 247, 0.86);
+  font-size: 1rem;
+}
+
+.agent-hero-social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.agent-hero-social-links a {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(174, 182, 193, 0.22);
+  border-radius: 14px;
+  background: rgba(5, 11, 18, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.agent-hero-social-links a img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.agent-hero-social-links a:hover {
+  transform: translateY(-2px);
+  border-color: var(--copper-metallic);
+  background: rgba(184, 115, 90, 0.08);
+  box-shadow: 0 12px 24px rgba(184, 115, 90, 0.18);
+}
+
+
+/* =========================================================
+   HERO RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .agent-hero {
+    min-height: auto;
+    align-items: flex-end;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 11, 18, 0.28) 0%,
+        rgba(5, 11, 18, 0.76) 44%,
+        rgba(5, 11, 18, 0.98) 100%
+      ),
+      url("../agentes/demostracion/assets/images/01_hero/hero-bg.webp") center/cover
+        no-repeat;
+  }
+
+  .agent-hero-container {
+    width: min(100% - 32px, 760px);
+    padding: 180px 0 72px;
+  }
+
+  .agent-hero-content {
+    max-width: 100%;
+  }
+
+  .agent-hero-profile {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .agent-hero-avatar {
+    width: 88px;
+    height: 88px;
+  }
+
+  .agent-hero-divider {
+    width: 170px;
+  }
+
+  .agent-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .agent-hero-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .agent-hero-container {
+    width: min(100% - 28px, 520px);
+    padding: 85px 0 56px;
+  }
+
+  .agent-hero-content {
+    text-align: center;
+  }
+
+  .agent-hero-profile {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .agent-hero-avatar {
+    width: 160px;
+    height: 160px;
+    border: 2px solid var(--copper-metallic);
+    box-shadow:
+      0 0 0 8px rgba(184, 115, 90, 0.08),
+      0 20px 60px rgba(0, 0, 0, 0.48);
+  }
+
+  .agent-hero-label {
+    margin-bottom: 12px;
+    font-size: 0.76rem;
+    letter-spacing: 0.09em;
+  }
+
+  .agent-hero-title {
+    font-size: clamp(2.6rem, 13vw, 3.8rem);
+    line-height: 0.96;
+  }
+
+  .agent-hero-divider {
+    width: 120px;
+    margin: 26px auto 26px;
+  }
+
+  .agent-hero-headline {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    line-height: 1.12;
+    margin-bottom: 26px;
+  }
+
+  .agent-hero-location {
+    justify-content: center;
+    font-size: 0.98rem;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .agent-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .agent-hero-btn {
+    width: 100%;
+    min-height: 56px;
+  }
+
+  .agent-hero-social {
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .agent-hero-social-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .agent-hero-social-links a {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+  }
+}
+
+/* =========================================================
+   END HERO SECTION
+========================================================= */
+
+/* =========================================================
+   YOUTUBE MODAL — HERO SOCIAL VIDEO
+   Descripción:
+   Modal premium para reproducir video de YouTube en desktop.
+   En mobile el enlace se abre directamente desde el icono.
+========================================================= */
+
+.agent-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(2, 6, 12, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.agent-video-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.agent-video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.agent-video-modal-panel {
+  position: relative;
+  z-index: 2;
+  width: min(920px, 100%);
+  border: 1px solid rgba(184, 115, 90, 0.34);
+  border-radius: 22px;
+  background: #050b12;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+  overflow: hidden;
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.28s ease;
+}
+
+.agent-video-modal.is-open .agent-video-modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.agent-video-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(242, 244, 247, 0.18);
+  border-radius: 50%;
+  background: rgba(5, 11, 18, 0.72);
+  color: var(--cloud-white);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.agent-video-modal-close:hover {
+  color: var(--copper-metallic);
+  border-color: var(--copper-metallic);
+  background: rgba(184, 115, 90, 0.12);
+  transform: rotate(90deg);
+}
+
+.agent-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.agent-video-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* =========================================================
+   YOUTUBE MODAL — MOBILE SAFETY
+   El siguiente codigo lo comento porque es el que oculta
+   la ventana del video de youtube en version movil y 
+   responsive
+========================================================= */
+
+/* @media (max-width: 768px) {
+  .agent-video-modal {
+    display: none;
+  }
+} */
+
+/* =========================================================
+   END YOUTUBE MODAL
+========================================================= */
+
+/* =========================================================
+   PROPERTIES SECTION — MITEPUY AGENT PROFILE
+========================================================= */
+
+.agent-properties {
+  position: relative;
+  padding: 110px 0;
+
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(184, 115, 90, 0.12),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #050b12 0%, #07111f 100%);
+
+  overflow: hidden;
+}
+
+.agent-properties::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+
+  background-size: 64px 64px;
+
+  opacity: 0.28;
+
+  pointer-events: none;
+}
+
+.agent-properties-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 48px, 1440px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.agent-section-header {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.agent-section-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--copper-metallic);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.agent-section-title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.agent-section-title {
+  margin: 0;
+
+  color: var(--cloud-white);
+
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+}
+
+.agent-section-link {
+  color: var(--copper-metallic);
+
+  text-decoration: none;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+.agent-section-link::after {
+  content: " →";
+}
+
+.agent-section-link:hover {
+  color: var(--cloud-white);
+}
+
+.agent-section-description {
+  max-width: 640px;
+
+  margin: 20px 0 0;
+
+  color: rgba(242, 244, 247, 0.72);
+
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CAROUSEL SHELL
+========================================================= */
+
+.agent-properties-shell {
+  position: relative;
+
+  padding: 28px;
+
+  border: 1px solid rgba(174, 182, 193, 0.18);
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(11, 29, 45, 0.62),
+    rgba(5, 11, 18, 0.82)
+  );
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   PROPERTIES TRACK — REAL CAROUSEL
+========================================================= */
+
+.agent-properties-track {
+  display: flex;
+  align-items: stretch;
+
+  gap: 24px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: auto;
+
+  user-select: none;
+
+  padding-bottom: 12px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.agent-properties-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   PROPERTY CARD
+========================================================= */
+
+.agent-property-card {
+  position: relative;
+
+  flex: 0 0 380px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: var(--cloud-white);
+
+  color: #07111f;
+
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+
+  cursor: pointer;
+
+  scroll-snap-align: center;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.agent-property-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+}
+
+/* =========================================================
+   PROPERTY MEDIA
+========================================================= */
+
+.agent-property-media {
+  position: relative;
+
+  height: 240px;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.agent-property-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  pointer-events: none;
+
+  -webkit-user-drag: none;
+
+  transition: transform 0.45s ease;
+}
+
+.agent-property-card:hover .agent-property-image {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   PROPERTY BADGE
+========================================================= */
+
+.agent-property-badge {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(5, 11, 18, 0.88);
+
+  color: var(--cloud-white);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   PROPERTY BODY
+========================================================= */
+
+.agent-property-body {
+  padding: 20px 20px 22px;
+}
+
+.agent-property-title {
+  margin: 0 0 8px;
+
+  color: #07111f;
+
+  font-size: 1.1rem;
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  letter-spacing: -0.025em;
+}
+
+.agent-property-location {
+  margin: 0 0 12px;
+
+  color: rgba(7, 17, 31, 0.7);
+
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.agent-property-location::before {
+  content: "⌖ ";
+
+  color: var(--copper-metallic);
+}
+
+.agent-property-price {
+  margin: 0 0 18px;
+
+  color: #b8735a;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   PROPERTY SPECS
+========================================================= */
+
+.agent-property-specs {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  color: rgba(7, 17, 31, 0.78);
+}
+
+.agent-property-spec {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.agent-property-spec img {
+  width: 15px;
+  height: 15px;
+
+  object-fit: contain;
+
+  opacity: 0.72;
+}
+
+.agent-property-spec span {
+  display: flex;
+  align-items: baseline;
+
+  gap: 5px;
+}
+
+.agent-property-specs strong {
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.agent-property-specs small {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.agent-properties-arrow {
+  position: absolute;
+  top: 50%;
+
+  z-index: 5;
+
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(242, 244, 247, 0.96);
+
+  color: #07111f;
+
+  font-size: 1.3rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34);
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.agent-properties-arrow:hover {
+  background: var(--copper-metallic);
+
+  color: var(--cloud-white);
+
+  transform: translateY(-50%) scale(1.06);
+}
+
+.agent-properties-arrow-left {
+  left: 18px;
+}
+
+.agent-properties-arrow-right {
+  right: 18px;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.agent-properties-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 26px;
+}
+
+.agent-properties-pagination button {
+  width: 14px;
+  height: 14px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    width 0.25s ease;
+}
+
+.agent-properties-pagination button.active {
+  width: 36px;
+
+  border-radius: 999px;
+
+  background: var(--copper-metallic);
+}
+
+/* =========================================================
+   PROPERTY MODAL
+========================================================= */
+
+.property-modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  background: rgba(2, 6, 12, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.28s ease;
+}
+
+.property-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.property-modal-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.property-modal-panel {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1040px, 100%);
+
+  border: 1px solid rgba(184, 115, 90, 0.34);
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(11, 29, 45, 0.98),
+    rgba(5, 11, 18, 0.98)
+  );
+
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+
+  overflow: hidden;
+}
+
+.property-modal-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 3;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(242, 244, 247, 0.18);
+  border-radius: 50%;
+
+  background: rgba(5, 11, 18, 0.72);
+
+  color: var(--cloud-white);
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+}
+
+.property-modal-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.property-modal-content {
+  padding: 46px 38px;
+}
+
+.property-modal-badge {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(184, 115, 90, 0.16);
+
+  color: var(--copper-metallic);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.property-modal-content h3 {
+  margin: 0 0 14px;
+
+  color: var(--cloud-white);
+
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.property-modal-price {
+  margin: 0 0 14px;
+
+  color: var(--copper-metallic);
+
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.property-modal-location {
+  margin: 0 0 26px;
+
+  color: rgba(242, 244, 247, 0.76);
+}
+
+/* =========================================================
+   PROPERTY MODAL GALLERY
+========================================================= */
+
+.property-modal-media {
+  position: relative;
+  min-width: 0;
+  background: #050b12;
+  overflow: hidden;
+}
+
+.property-modal-gallery {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.property-modal-gallery-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  transition:
+    opacity 0.28s ease,
+    transform 0.35s ease;
+}
+
+.property-modal-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(5, 11, 18, 0.72);
+  color: var(--cloud-white);
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.property-modal-gallery-prev {
+  left: 16px;
+}
+
+.property-modal-gallery-next {
+  right: 16px;
+}
+
+/* =========================================================
+   PROPERTY MODAL THUMBNAILS — INTERNAL CAROUSEL
+========================================================= */
+
+.property-modal-thumbnails-shell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px 16px;
+  background: rgba(5, 11, 18, 0.96);
+  overflow: hidden;
+}
+
+.property-modal-thumbnails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex: 1;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  user-select: none;
+}
+
+.property-modal-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   THUMBNAILS BUTTON
+========================================================= */
+
+.property-modal-thumbnails button {
+  flex: 0 0 108px;
+
+  width: 108px;
+  height: 81px;
+
+  padding: 0;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  scroll-snap-align: center;
+
+  background: transparent;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.property-modal-thumbnails button:hover {
+  transform: translateY(-2px);
+}
+
+.property-modal-thumbnails button.is-active {
+  border-color: var(--copper-metallic);
+}
+
+/* =========================================================
+   THUMBNAIL IMAGE
+========================================================= */
+
+.property-modal-thumbnails img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+/* =========================================================
+   THUMBNAILS ARROWS
+========================================================= */
+
+.property-modal-thumbnails-arrow {
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(242, 244, 247, 0.08);
+
+  color: var(--cloud-white);
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.property-modal-thumbnails-arrow:hover {
+  background: rgba(184, 115, 90, 0.18);
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   PROPERTY MODAL GALLERY — RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .property-modal-gallery {
+    height: 300px;
+    aspect-ratio: unset;
+    background: #050b12;
+  }
+
+  .property-modal-gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .property-modal-gallery-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+
+  .property-modal-thumbnails button {
+    flex: 0 0 76px;
+    width: 76px;
+    height: 57px;
+  }
+
+  .agent-properties-track {
+    gap: 18px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 8%;
+  }
+}
+
+/* =========================================================
+   PROPERTY MODAL SPECS
+========================================================= */
+
+.property-modal-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.property-modal-spec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 82px;
+  padding: 14px;
+
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 14px;
+
+  color: var(--cloud-white);
+}
+
+.property-modal-spec img {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+
+  object-fit: contain;
+  display: block;
+
+  opacity: 0.82;
+}
+
+.property-modal-spec span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.property-modal-spec strong {
+  color: var(--copper-metallic);
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.property-modal-spec small {
+  color: rgba(242, 244, 247, 0.72);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.property-modal-description {
+  margin: 0 0 28px;
+
+  color: rgba(242, 244, 247, 0.76);
+
+  line-height: 1.7;
+}
+
+.property-modal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 28px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #b8735a, #d27a32);
+
+  color: var(--cloud-white);
+
+  text-decoration: none;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .agent-property-card {
+    flex: 0 0 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-properties {
+    padding: 78px 0;
+  }
+
+  .agent-properties-container {
+    width: min(100% - 28px, 680px);
+  }
+
+  .agent-section-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .agent-properties-shell {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .agent-properties-track {
+    gap: 18px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 8%;
+  }
+
+  .agent-property-card {
+    flex: 0 0 84%;
+    scroll-snap-align: center;
+  }
+
+  .agent-property-media {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .agent-property-image {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .agent-properties-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .property-modal {
+    padding: 18px;
+  }
+
+  .property-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-modal-content {
+    padding: 28px 22px;
+  }
+
+  .property-modal-content h3 {
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .agent-properties {
+    padding: 64px 0;
+  }
+
+  .agent-properties-shell {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .agent-properties-track {
+    gap: 16px;
+    scroll-padding-inline: 6%;
+  }
+
+  .agent-property-card {
+    flex: 0 0 92%;
+    scroll-snap-align: center;
+  }
+
+  .agent-property-media {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .agent-property-body {
+    padding: 18px;
+  }
+
+  .agent-property-title {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .agent-property-price {
+    font-size: 1.05rem;
+  }
+
+  .agent-properties-arrow {
+    display: none;
+  }
+
+  .property-modal {
+    padding: 10px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .property-modal-panel {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .property-modal-gallery {
+    height: 300px;
+  }
+
+  .property-modal-gallery-image {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .property-modal-thumbnails-shell {
+    padding: 12px 12px 14px;
+  }
+
+  .property-modal-thumbnails {
+    gap: 8px;
+  }
+
+  .property-modal-thumbnails button {
+    flex: 0 0 68px;
+    width: 68px;
+    height: 51px;
+  }
+
+  .property-modal-content {
+    padding: 24px 20px 28px;
+  }
+
+  .property-modal-content h3 {
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+
+  .property-modal-specs {
+    gap: 10px;
+  }
+
+  .property-modal-spec {
+    min-height: 74px;
+    padding: 12px;
+  }
+
+  .property-modal-whatsapp {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   END PROPERTIES SECTION
+========================================================= */
+
+
+
+/* =========================================================
+   SERVICES SECTION — MITEPUY AGENT PROFILE
+========================================================= */
+
+.agent-services {
+  position: relative;
+  padding: 105px 0;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(184, 115, 90, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #07111f 0%, #050b12 100%);
+  overflow: hidden;
+}
+
+.agent-services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.agent-services-container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.agent-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.agent-service-card {
+  position: relative;
+  min-height: 245px;
+  padding: 30px;
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 11, 18, 0.92),
+      rgba(5, 11, 18, 0.96)
+    );
+
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.28);
+
+  cursor: pointer;
+  overflow: hidden;
+
+  transition:
+    transform 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease,
+    background 0.32s ease;
+}
+
+.agent-service-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.99;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+
+  pointer-events: none;
+}
+
+.agent-service-card:nth-child(1)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/casa_back.webp");
+}
+
+.agent-service-card:nth-child(2)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/llave_back.webp");
+}
+
+.agent-service-card:nth-child(3)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/edificio_back.webp");
+}
+
+.agent-service-card:nth-child(4)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/metrica_back.webp");
+}
+
+.agent-service-card:nth-child(5)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/documento_back.webp");
+}
+
+.agent-service-card:nth-child(6)::before {
+  background-image:
+    linear-gradient(
+      rgba(5, 11, 18, 0.42),
+      rgba(5, 11, 18, 0.68)
+    ),
+    url("../agentes/demostracion/assets/images/04_servicios/mano_back.webp");
+}
+
+.agent-service-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.agent-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 115, 90, 0.42);
+  box-shadow: 0 28px 76px rgba(0, 0, 0, 0.38);
+}
+
+.agent-service-card:hover::before {
+  opacity: 0.18;
+  transform: scale(1.03);
+}
+
+.agent-service-icon-wrap {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border: 1px solid rgba(184, 115, 90, 0.28);
+  border-radius: 16px;
+
+  background: rgba(184, 115, 90, 0.08);
+
+  transition:
+    border-color 0.32s ease,
+    background 0.32s ease,
+    transform 0.32s ease;
+}
+
+.agent-service-icon {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+  display: block;
+
+  transition: transform 0.32s ease;
+}
+
+.agent-service-card:hover .agent-service-icon-wrap {
+  border-color: rgba(184, 115, 90, 0.48);
+  background: rgba(184, 115, 90, 0.12);
+}
+
+.agent-service-card:hover .agent-service-icon {
+  transform: scale(1.04) rotate(2deg);
+}
+
+.agent-service-title {
+  margin: 0 0 12px;
+
+  color: var(--cloud-white);
+
+  font-size: 1.15rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.agent-service-description {
+  margin: 0;
+
+  color: rgba(242, 244, 247, 0.7);
+
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   SERVICES CTA
+========================================================= */
+
+.agent-services-cta-wrap {
+  display: none;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.agent-services-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #b8735a, #d27a32);
+  color: var(--cloud-white);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 38px rgba(184, 115, 90, 0.26);
+}
+
+/* =========================================================
+   SERVICE MODAL
+========================================================= */
+
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  background: rgba(2, 6, 12, 0.76);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.28s ease;
+}
+
+.service-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.service-modal-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.service-modal-panel {
+  position: relative;
+  z-index: 2;
+
+  width: min(520px, 100%);
+
+  border: 1px solid rgba(184, 115, 90, 0.34);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11, 29, 45, 0.96),
+      rgba(5, 11, 18, 0.98)
+    );
+
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+
+  overflow: hidden;
+}
+
+.service-modal-panel::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background-image: var(--service-modal-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.42;
+
+  transform: scale(1.04);
+
+  pointer-events: none;
+}
+
+.service-modal-panel::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 11, 18, 0.38),
+      rgba(5, 11, 18, 0.72)
+    );
+
+  pointer-events: none;
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  z-index: 4;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(242, 244, 247, 0.18);
+  border-radius: 50%;
+
+  background: rgba(5, 11, 18, 0.72);
+
+  color: var(--cloud-white);
+
+  font-size: 1.8rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.service-modal-content {
+  position: relative;
+  z-index: 3;
+
+  padding: 48px 40px 42px;
+}
+
+.service-modal-icon-wrap {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 26px;
+
+  border: 1px solid rgba(184, 115, 90, 0.32);
+  border-radius: 20px;
+
+  background: rgba(184, 115, 90, 0.1);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.service-modal-icon {
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+  display: block;
+}
+
+.service-modal-content h3 {
+  margin: 0 0 16px;
+
+  color: var(--cloud-white);
+
+  font-size: 1.65rem;
+  line-height: 1.12;
+  font-weight: 800;
+
+  letter-spacing: -0.035em;
+}
+
+.service-modal-content p {
+  margin: 0;
+
+  color: rgba(242, 244, 247, 0.78);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SERVICES RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+  .agent-services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .agent-service-card {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 980px) {
+  .agent-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agent-services-cta-wrap {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .agent-services {
+    padding: 72px 0;
+  }
+
+  .agent-services-container {
+    width: min(100% - 28px, 680px);
+  }
+
+  .agent-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .agent-service-card {
+    min-height: auto;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .agent-service-icon-wrap {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+  }
+
+  .agent-service-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .agent-services-cta-wrap {
+    margin-top: 28px;
+  }
+
+  .agent-services-cta {
+    width: 100%;
+  }
+
+  .service-modal {
+    padding: 18px;
+  }
+
+  .service-modal-panel {
+    border-radius: 20px;
+  }
+
+  .service-modal-content {
+    padding: 42px 28px 34px;
+  }
+
+  .service-modal-icon-wrap {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+  }
+
+  .service-modal-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-modal-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-modal-content p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 420px) {
+  .agent-service-card {
+    padding: 22px;
+  }
+
+  .service-modal {
+    padding: 12px;
+  }
+
+  .service-modal-content {
+    padding: 40px 24px 32px;
+  }
+}
+
+
+/* =========================================================
+   ABOUT SECTION — MITEPUY AGENT PROFILE
+========================================================= */
+
+.agent-about {
+  position: relative;
+  padding: 115px 0;
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(184, 115, 90, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #050b12 0%, #07111f 48%, #050b12 100%);
+  overflow: hidden;
+}
+
+.agent-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.agent-about-container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.agent-about-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr 0.85fr;
+  gap: 34px;
+  align-items: stretch;
+  min-height: 520px;
+  padding: 34px;
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 11, 18, 0.78),
+      rgba(11, 29, 45, 0.7)
+    ),
+    url("../agentes/demostracion/assets/images/01_hero/hero-bg.webp") center/cover
+      no-repeat;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.agent-about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 24% 42%,
+      rgba(184, 115, 90, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, 0.26),
+      rgba(5, 11, 18, 0.74)
+    );
+  pointer-events: none;
+}
+
+.agent-about-photo-wrap,
+.agent-about-copy,
+.agent-about-stats {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   ABOUT PHOTO
+========================================================= */
+
+.agent-about-photo-wrap {
+  min-height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(5, 11, 18, 0.4);
+  border: 1px solid rgba(184, 115, 90, 0.2);
+}
+
+.agent-about-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* =========================================================
+   ABOUT COPY
+========================================================= */
+
+.agent-about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 8px;
+}
+
+.agent-about-title {
+  max-width: 620px;
+  margin: 0 0 24px;
+  color: var(--cloud-white);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.agent-about-copy p {
+  max-width: 620px;
+  margin: 0 0 18px;
+  color: rgba(242, 244, 247, 0.78);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.agent-about-signature {
+  margin-top: 22px;
+}
+
+.agent-about-signature img {
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 12px rgba(184, 115, 90, 0.12));
+}
+
+/* =========================================================
+   ABOUT STATS
+========================================================= */
+
+.agent-about-stats {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.agent-about-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 18px;
+  background: rgba(5, 11, 18, 0.58);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.agent-about-stat img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex: 0 0 28px;
+}
+
+.agent-about-stat strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--copper-metallic);
+  font-size: 1.15rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.agent-about-stat span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--cloud-white);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.agent-about-stat small {
+  display: block;
+  color: rgba(242, 244, 247, 0.6);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+
+
+
+/* =========================================================
+   ABOUT CTA
+========================================================= */
+
+.agent-about-cta-wrap {
+  display: none;
+}
+
+
+/* =========================================================
+   ABOUT RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1180px) {
+  .agent-about-hero {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .agent-about-stats {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .agent-about-stat {
+    min-height: 118px;
+  }
+
+  .agent-about-body {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-about-timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .agent-about-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .agent-about {
+    padding: 88px 0;
+  }
+
+  .agent-about-container {
+    width: min(100% - 32px, 900px);
+  }
+
+  .agent-about-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .agent-about-photo-wrap {
+    max-width: 420px;
+    min-height: auto;
+  }
+
+  .agent-about-photo {
+    min-height: 420px;
+  }
+
+  .agent-about-copy {
+    padding: 8px 0 4px;
+  }
+
+  .agent-about-title {
+    max-width: 720px;
+  }
+
+  .agent-about-copy p {
+    max-width: 720px;
+  }
+
+  .agent-about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agent-about-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agent-about-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   ABOUT RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .agent-about {
+    padding: 72px 0;
+  }
+
+  .agent-about-container {
+    width: min(100% - 28px, 520px);
+  }
+
+  .agent-about-hero {
+    padding: 22px;
+    border-radius: 22px;
+    gap: 22px;
+  }
+
+  .agent-about-photo-wrap {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .agent-about-photo {
+    min-height: 360px;
+  }
+
+  .agent-about-copy {
+    padding: 0;
+  }
+
+  .agent-about-title {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 0.98;
+  }
+
+  .agent-about-copy p {
+    margin-bottom: 16px;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .agent-about-signature {
+    font-size: 1.15rem !important;
+  }
+
+  .agent-about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .agent-about-stat {
+    flex-direction: column;
+    min-height: 136px;
+    padding: 16px;
+  }
+
+  .agent-about-stat img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .agent-about-stat strong {
+    font-size: 1.05rem;
+  }
+
+  .agent-about-stat span {
+    font-size: 0.78rem;
+  }
+
+  .agent-about-stat small {
+    font-size: 0.7rem;
+  }
+
+  .agent-about-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .agent-about-panel {
+    border-radius: 18px;
+  }
+
+  .agent-about-panel-toggle {
+    width: 100%;
+    min-height: 58px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 0;
+    background: rgba(5, 11, 18, 0.72);
+
+    color: var(--cloud-white);
+
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+  }
+
+  .agent-about-toggle-icon {
+    color: var(--copper-metallic);
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .agent-about-panel-content {
+    display: none;
+    padding: 20px;
+  }
+
+  .agent-about-panel-content.is-open {
+    display: block;
+  }
+
+  .agent-about-section-heading {
+    display: none;
+  }
+
+  .agent-about-timeline {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .agent-about-timeline-item {
+    padding: 18px;
+  }
+
+  .agent-about-values {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .agent-about-value {
+    padding: 16px;
+  }
+
+  .agent-about-cta-wrap {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .agent-about-cta {
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: var(--cloud-white);
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+  }
+
+  .agent-about-cta-primary {
+    background: linear-gradient(135deg, #b8735a, #d27a32);
+    box-shadow: 0 16px 38px rgba(184, 115, 90, 0.26);
+  }
+
+  .agent-about-cta-secondary {
+    border: 1px solid rgba(184, 115, 90, 0.58);
+    background: rgba(5, 11, 18, 0.42);
+  }
+}
+
+@media (max-width: 420px) {
+  .agent-about-photo {
+    min-height: 320px;
+  }
+
+  .agent-about-hero {
+    padding: 18px;
+  }
+
+  .agent-about-stats {
+    gap: 10px;
+  }
+
+  .agent-about-stat {
+    padding: 14px;
+  }
+}
+
+
+/* =========================================================
+   ABOUT MICROINTERACTIONS
+========================================================= */
+
+.agent-about-stat,
+.agent-about-timeline-item,
+.agent-about-value {
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.agent-about-stat:hover,
+.agent-about-timeline-item:hover,
+.agent-about-value:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 115, 90, 0.36);
+  background: rgba(5, 11, 18, 0.58);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+.agent-about-stat img,
+.agent-about-timeline-icon,
+.agent-about-value img {
+  transition:
+    transform 0.28s ease,
+    filter 0.28s ease;
+}
+
+.agent-about-stat:hover img,
+.agent-about-timeline-item:hover .agent-about-timeline-icon,
+.agent-about-value:hover img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(184, 115, 90, 0.32));
+}
+
+
+/* =========================================================
+   TESTIMONIALS SECTION — MITEPUY
+========================================================= */
+
+.agent-testimonials {
+  position: relative;
+  padding: 115px 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(184, 115, 90, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #050b12 0%,
+      #07111f 50%,
+      #050b12 100%
+    );
+  overflow: hidden;
+}
+
+.agent-testimonials-container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TESTIMONIALS PANEL
+========================================================= */
+
+.agent-testimonials-panel {
+  position: relative;
+  padding: 42px;
+  border: 0px solid rgba(174, 182, 193, 0.16);
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 11, 18, 0.84),
+      rgba(11, 29, 45, 0.74)
+    ),
+    url("../assets/05_como_funciona/como_funciona_2.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+}
+
+.agent-testimonials-panel::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 11, 18, 0.28),
+      rgba(5, 11, 18, 0.86)
+    );
+
+  pointer-events: none;
+}
+
+.agent-testimonials-panel > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   TESTIMONIALS HEADER
+========================================================= */
+
+.agent-testimonials-header {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.agent-testimonials-title {
+  margin: 0 0 18px;
+  color: var(--cloud-white);
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.agent-testimonials-description {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(242, 244, 247, 0.74);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   TESTIMONIALS SUMMARY
+========================================================= */
+
+.agent-testimonials-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.agent-testimonials-rating {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 16px 20px;
+
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 18px;
+
+  background: rgba(5, 11, 18, 0.52);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.agent-testimonials-rating strong {
+  color: var(--cloud-white);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.agent-testimonials-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.agent-testimonials-star {
+  color: var(--copper-metallic);
+  font-size: 0.9rem;
+}
+
+.agent-testimonials-rating span {
+  color: rgba(242, 244, 247, 0.62);
+  font-size: 0.82rem;
+}
+
+.agent-testimonials-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 54px;
+  padding: 0 18px;
+
+  border: 1px solid rgba(184, 115, 90, 0.28);
+  border-radius: 16px;
+
+  background: rgba(184, 115, 90, 0.08);
+
+  color: var(--cloud-white);
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.agent-testimonials-check {
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(184, 115, 90, 0.16);
+
+  color: var(--copper-metallic);
+
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   TESTIMONIALS CAROUSEL
+========================================================= */
+
+.agent-testimonials-carousel {
+  position: relative;
+}
+
+.agent-testimonials-track {
+  display: flex;
+  gap: 22px;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.agent-testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   TESTIMONIAL CARD
+========================================================= */
+
+.agent-testimonial-card {
+  flex: 0 0 calc((100% - 66px) / 4);
+
+  scroll-snap-align: start;
+
+  padding: 24px;
+
+  border: 1px solid rgba(174, 182, 193, 0.14);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11, 29, 45, 0.58),
+      rgba(5, 11, 18, 0.84)
+    );
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.agent-testimonial-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(184, 115, 90, 0.28);
+
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.32);
+}
+
+/* =========================================================
+   TESTIMONIAL TOP
+========================================================= */
+
+.agent-testimonial-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.agent-testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.agent-testimonial-photo {
+  width: 84px;
+  height: 84px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+  display: block;
+
+  border: 2px solid rgba(184, 115, 90, 0.28);
+
+  box-shadow:
+    0 0 18px rgba(184, 115, 90, 0.14);
+}
+
+.agent-testimonial-user h3 {
+  margin: 0 0 4px;
+  color: var(--cloud-white);
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.agent-testimonial-user span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: rgba(242, 244, 247, 0.58);
+
+  font-size: 0.76rem;
+}
+
+.agent-testimonial-stars {
+  color: var(--copper-metallic);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.agent-testimonial-quote {
+  color: rgba(184, 115, 90, 0.26);
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* =========================================================
+   TESTIMONIAL TEXT
+========================================================= */
+
+.agent-testimonial-text {
+  margin: 0 0 22px;
+
+  color: rgba(242, 244, 247, 0.74);
+
+  font-size: 0.9rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   TESTIMONIAL TAG
+========================================================= */
+
+.agent-testimonial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 42px;
+  padding: 0 14px;
+
+  border: 1px solid rgba(184, 115, 90, 0.18);
+  border-radius: 12px;
+
+  background: rgba(184, 115, 90, 0.06);
+}
+
+.agent-testimonial-tag img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.agent-testimonial-tag span {
+  color: var(--cloud-white);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TESTIMONIALS ARROWS
+========================================================= */
+
+.agent-testimonials-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 4;
+
+  width: 44px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 50%;
+
+  background: rgba(5, 11, 18, 0.52);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: var(--cloud-white);
+
+  font-size: 1.8rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.28s ease,
+    border-color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.agent-testimonials-arrow:hover {
+  border-color: rgba(184, 115, 90, 0.28);
+  background: rgba(11, 29, 45, 0.72);
+}
+
+.agent-testimonials-arrow-prev {
+  left: -18px;
+}
+
+.agent-testimonials-arrow-next {
+  right: -18px;
+}
+
+/* =========================================================
+   TESTIMONIALS DOTS
+========================================================= */
+
+.agent-testimonials-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.agent-testimonials-dot {
+  width: 9px;
+  height: 9px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(242, 244, 247, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.28s ease,
+    background 0.28s ease;
+}
+
+.agent-testimonials-dot.is-active {
+  background: var(--copper-metallic);
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   TESTIMONIALS CTA
+========================================================= */
+
+.agent-testimonials-cta-wrap {
+  display: none;
+}
+
+
+/* =========================================================
+   TESTIMONIALS RESPONSIVE / MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .agent-testimonials-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-testimonial-card {
+    padding-top: 32px;
+  }
+  .agent-testimonial-quote {
+    font-size: 2rem;
+    top: 22px;
+    right: 22px;
+  }
+  .agent-testimonials-dots {
+    margin-top: 14px;
+  }
+  .agent-testimonial-photo {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+@media (max-width: 980px) {
+  .agent-testimonials {
+    padding: 82px 0;
+  }
+
+  .agent-testimonials-container {
+    width: min(100% - 28px, 760px);
+  }
+
+  .agent-testimonials-panel {
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .agent-testimonials-header {
+    margin-bottom: 32px;
+  }
+
+  .agent-testimonials-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .agent-testimonials-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .agent-testimonials-rating,
+  .agent-testimonials-verified {
+    width: 100%;
+  }
+
+  .agent-testimonial-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+
+  .agent-testimonials-track {
+    gap: 18px;
+    scroll-padding-inline: 0;
+    -webkit-overflow-scrolling: touch;
+    touch-action: auto;
+  }
+
+  .agent-testimonials-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  .agent-testimonials-arrow-prev {
+    left: 10px;
+  }
+
+  .agent-testimonials-arrow-next {
+    right: 10px;
+  }
+
+  .agent-testimonials-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .agent-testimonials-cta {
+    width: 100%;
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #b8735a, #d27a32);
+
+    color: var(--cloud-white);
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+
+    box-shadow: 0 16px 38px rgba(184, 115, 90, 0.26);
+  }
+  
+}
+
+@media (max-width: 540px) {
+  .agent-testimonials {
+    padding: 72px 0;
+  }
+
+  .agent-testimonials-panel {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .agent-testimonials-description {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .agent-testimonials-rating {
+    align-items: flex-start;
+  }
+
+  .agent-testimonial-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .agent-testimonial-top {
+    margin-bottom: 18px;
+  }
+
+  .agent-testimonial-photo {
+    width: 66px;
+    height: 66px;
+  }
+
+  .agent-testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.68;
+  }
+
+  .agent-testimonials-arrow {
+    display: none;
+  }
+
+  .agent-testimonials-dots {
+    margin-top: 24px;
+  }
+}
+
+
+/* =========================================================
+   TESTIMONIALS MICROINTERACTIONS
+========================================================= */
+
+.agent-testimonial-card,
+.agent-testimonials-rating,
+.agent-testimonials-verified {
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.agent-testimonials-rating:hover,
+.agent-testimonials-verified:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 115, 90, 0.32);
+  background: rgba(5, 11, 18, 0.62);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
+}
+
+.agent-testimonial-photo,
+.agent-testimonial-tag img {
+  transition:
+    transform 0.28s ease,
+    filter 0.28s ease;
+}
+
+.agent-testimonial-card:hover .agent-testimonial-photo,
+.agent-testimonial-card:hover .agent-testimonial-tag img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(184, 115, 90, 0.28));
+}
+
+.agent-testimonials-dot:hover {
+  background: rgba(184, 115, 90, 0.58);
+}
+
+.agent-testimonials-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.agent-testimonials-star {
+  color: rgba(242, 244, 247, 0.28);
+}
+
+.agent-testimonials-star.is-filled {
+  color: #d88943;
+  text-shadow: 0 0 10px rgba(216, 137, 67, 0.22);
+}
+
+.agent-testimonial-quote {
+  color: #d88943;
+
+  text-shadow:
+    0 0 14px rgba(216, 137, 67, 0.24);
+
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   CONTACT SECTION — MITEPUY
+========================================================= */
+
+.agent-contact {
+  position: relative;
+  padding: 80px 0;
+  background:
+    radial-gradient(
+      circle at 16% 20%,
+      rgba(184, 115, 90, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #050b12 0%, #07111f 52%, #050b12 100%);
+  overflow: hidden;
+}
+
+.agent-contact-container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CONTACT PANEL
+========================================================= */
+
+.agent-contact-panel {
+  position: relative;
+  min-height: 620px;
+  padding: 42px 48px;
+
+  border: 1px solid rgba(174, 182, 193, 0.16);
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 11, 18, 0.98),
+      rgba(5, 11, 18, 0.96)
+    );
+
+  box-shadow: 0 34px 95px rgba(0, 0, 0, 0.44);
+
+  overflow: hidden;
+}
+
+/* Imagen de fondo extendida para evitar cortes visibles */
+.agent-contact-panel::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+
+  background-image: url("../agentes/demostracion/assets/images/07_contactame/back_1.webp");
+  background-size: cover;
+  background-position: 68% center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.01);
+  transform-origin: center;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Máscara completa sobre toda la sección */
+.agent-contact-panel::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 11, 18, 0.96) 0%,
+      rgba(5, 11, 18, 0.86) 22%,
+      rgba(5, 11, 18, 0.58) 42%,
+      rgba(5, 11, 18, 0.26) 62%,
+      rgba(5, 11, 18, 0.08) 82%,
+      rgba(5, 11, 18, 0.02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 11, 18, 0.04) 0%,
+      rgba(5, 11, 18, 0.08) 48%,
+      rgba(5, 11, 18, 0.42) 100%
+    );
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.agent-contact-panel > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.agent-contact-content {
+  max-width: 620px;
+}
+
+.agent-contact-title {
+  margin: 0 0 22px;
+  color: var(--cloud-white);
+  font-size: clamp(2.35rem, 4vw, 4rem);
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.agent-contact-description {
+  max-width: 560px;
+  margin: 0;
+  color: rgba(242, 244, 247, 0.76);
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CONTACT ACTIONS
+========================================================= */
+
+.agent-contact-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  margin-top: 26px;
+  max-width: 760px;
+}
+
+.agent-contact-action {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+
+  padding: 0 18px;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.agent-contact-action-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 34px;
+}
+
+.agent-contact-action span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.agent-contact-action small {
+  color: rgba(242, 244, 247, 0.82);
+  font-size: 0.76rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.agent-contact-action strong {
+  color: var(--cloud-white);
+  font-size: 0.92rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.agent-contact-action em {
+  margin-left: auto;
+  color: currentColor;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* WhatsApp principal */
+.agent-contact-action-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #ffffff;
+  box-shadow: 0 18px 42px rgba(37, 211, 102, 0.24);
+}
+
+/* Teléfono secundario */
+.agent-contact-action-phone {
+  border: 1px solid rgba(174, 182, 193, 0.18);
+  background: rgba(5, 11, 18, 0.58);
+  color: var(--cloud-white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.agent-contact-phone-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+
+  border-radius: 50%;
+  background: rgba(184, 115, 90, 0.12);
+  color: var(--copper-metallic);
+  font-size: 1rem;
+}
+
+/* =========================================================
+   CONTACT BENEFITS
+========================================================= */
+
+.agent-contact-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+
+  max-width: 980px;
+
+  margin-top: 32px;
+}
+
+.agent-contact-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 86px;
+  padding: 16px;
+
+  border: 1px solid rgba(174, 182, 193, 0.14);
+  border-radius: 18px;
+
+  background: rgba(5, 11, 18, 0.52);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.agent-contact-benefit img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex: 0 0 28px;
+}
+
+.agent-contact-benefit strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--cloud-white);
+  font-size: 0.86rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.agent-contact-benefit span {
+  display: block;
+  color: rgba(242, 244, 247, 0.64);
+  font-size: 0.74rem;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   CONTACT DIRECT
+========================================================= */
+
+.agent-contact-direct {
+  max-width: 980px;
+  margin-top: 20px;
+}
+
+.agent-contact-direct h3 {
+  margin: 0 0 16px;
+  color: var(--cloud-white);
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.agent-contact-direct-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.agent-contact-direct-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-height: 88px;
+  padding: 16px;
+
+  border: 1px solid rgba(174, 182, 193, 0.14);
+  border-radius: 18px;
+
+  background: rgba(5, 11, 18, 0.48);
+
+  color: var(--cloud-white);
+  text-decoration: none;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.agent-contact-direct-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex: 0 0 24px;
+}
+
+.agent-contact-direct-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cloud-white);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.agent-contact-direct-item span {
+  display: block;
+  color: rgba(242, 244, 247, 0.64);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   CONTACT PRIVACY
+========================================================= */
+
+.agent-contact-privacy {
+  max-width: 620px;
+  margin: 28px 0 0;
+
+  color: rgba(242, 244, 247, 0.6);
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   DESKTOP
+   Ocultar botón teléfono en PC
+========================================================= */
+
+@media (min-width: 981px) {
+  .agent-contact-action-phone {
+    display: none;
+  }
+
+  .agent-contact-actions {
+    max-width: 360px;
+  }
+
+  .agent-contact-action-whatsapp {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   CONTACT MICROINTERACTIONS
+========================================================= */
+
+.agent-contact-action-whatsapp:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 24px 54px rgba(37, 211, 102, 0.32);
+
+  filter: brightness(1.03);
+}
+
+.agent-contact-action-phone:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 115, 90, 0.34);
+  background: rgba(11, 29, 45, 0.72);
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.agent-contact-benefit:hover,
+.agent-contact-direct-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 115, 90, 0.28);
+  background: rgba(11, 29, 45, 0.72);
+}
+
+.agent-contact-benefit {
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.agent-contact-action:active,
+.agent-contact-benefit:active,
+.agent-contact-direct-item:active {
+  transform: scale(0.99);
+}
+
+/* =========================================================
+   CONTACT RESPONSIVE / MOBILE
+   Premium editorial mobile layout
+========================================================= */
+
+@media (max-width: 980px) {
+  .agent-contact-panel {
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+    padding: 42px;
+
+    background:
+      radial-gradient(circle at 50% 0%, rgba(217, 119, 43, 0.16), transparent 38%),
+      linear-gradient(180deg, rgba(7, 15, 25, 0.98) 0%, rgba(5, 11, 18, 0.99) 100%);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .agent-contact-panel::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 210px;
+    height: 210px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    z-index: 1;
+    pointer-events: none;
+
+    background: url("../agentes/demostracion/assets/images/07_contactame/agente_contactame.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.34),
+      0 0 0 10px rgba(255, 255, 255, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .agent-contact-panel::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(217, 119, 43, 0.16) 0%,
+        rgba(217, 119, 43, 0.06) 42%,
+        transparent 72%
+      );
+
+    filter: blur(24px);
+  }
+
+  .agent-contact-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    padding-top: 240px;
+  }
+
+  .agent-contact-benefits,
+  .agent-contact-direct,
+  .agent-contact-direct-grid {
+    max-width: 100%;
+  }
+
+  .agent-contact-benefits,
+  .agent-contact-direct-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-contact {
+    padding: 64px 0;
+  }
+
+  .agent-contact-container {
+    width: min(100% - 28px, 680px);
+  }
+
+  .agent-contact-panel {
+    padding: 28px 22px 26px;
+    border-radius: 26px;
+  }
+
+  .agent-contact-panel::before {
+    top: 18px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .agent-contact-panel::after {
+    top: 34px;
+    width: 210px;
+    height: 210px;
+  }
+
+  .agent-contact-content {
+    padding-top: 248px;
+  }
+
+  .agent-contact-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    color: rgba(217, 119, 43, 0.95);
+  }
+
+  .agent-contact-title {
+    max-width: 11ch;
+    font-size: clamp(2.15rem, 9vw, 3rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+  }
+
+  .agent-contact-description {
+    max-width: 34ch;
+    font-size: 0.96rem;
+    line-height: 1.62;
+    color: rgba(255, 255, 255, 0.74);
+  }
+
+  .agent-contact-actions {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    margin-top: 26px;
+  }
+
+  .agent-contact-action {
+    width: 100%;
+    min-height: 68px;
+    border-radius: 19px;
+  }
+
+  .agent-contact-action-whatsapp {
+    min-height: 72px;
+
+    box-shadow:
+      0 18px 44px rgba(37, 211, 102, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  }
+
+  .agent-contact-benefits,
+  .agent-contact-direct-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .agent-contact-benefits {
+    margin-top: 28px;
+  }
+
+  .agent-contact-direct {
+    margin-top: 24px;
+  }
+
+  .agent-contact-benefit,
+  .agent-contact-direct-item {
+    min-height: 132px;
+    padding: 16px 14px;
+    border-radius: 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(9, 22, 36, 0.86),
+        rgba(5, 13, 22, 0.94)
+      );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 14px 32px rgba(0, 0, 0, 0.18);
+  }
+
+  .agent-contact-benefit-icon,
+  .agent-contact-direct-icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 14px;
+  }
+
+  .agent-contact-benefit-title,
+  .agent-contact-direct-title {
+    font-size: 0.82rem;
+    line-height: 1.15;
+  }
+
+  .agent-contact-benefit-description,
+  .agent-contact-direct-value {
+    margin-top: 5px;
+    font-size: 0.72rem;
+    line-height: 1.28;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .agent-contact-privacy {
+    margin-top: 20px;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  .agent-contact-direct-item > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .agent-contact-direct-item span {
+    display: block;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 520px) {
+  .agent-contact {
+    padding: 50px 0;
+  }
+
+  .agent-contact-container {
+    width: min(100% - 22px, 680px);
+  }
+
+  .agent-contact-panel {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .agent-contact-panel::before {
+    top: 16px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .agent-contact-panel::after {
+    top: 32px;
+    width: 210px;
+    height: 210px;
+  }
+
+  .agent-contact-content {
+    padding-top: 210px;
+  }
+
+  .agent-contact-benefits,
+  .agent-contact-direct-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .agent-contact-benefit,
+  .agent-contact-direct-item {
+    min-height: 122px;
+    padding: 14px 12px;
+    border-radius: 18px;
+  }
+
+  .agent-contact-benefit-icon,
+  .agent-contact-direct-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+
+  .agent-contact-benefit-title,
+  .agent-contact-direct-title {
+    font-size: 0.78rem;
+  }
+
+  .agent-contact-benefit-description,
+  .agent-contact-direct-value {
+    font-size: 0.68rem;
+  }
+}
+
+
+/* =========================================================
+   PREMIUM FOOTER — MITEPUY
+========================================================= */
+
+.agent-footer {
+  position: relative;
+
+  padding: 90px 0 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(184, 115, 90, 0.12),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #07111f 0%,
+      #081d2d 100%
+    );
+
+  border-top: 1px solid rgba(255,255,255,0.06);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.agent-footer-container {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 90px;
+
+  padding-bottom: 55px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.agent-footer-brand {
+  max-width: 480px;
+}
+
+.agent-footer-logo {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.agent-footer-logo img {
+  width: 170px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.agent-footer-logo span {
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: -1px;
+}
+
+.agent-footer-logo span span {
+  color: var(--accent);
+}
+
+.agent-footer-description {
+  color: rgba(242,244,247,0.72);
+
+  font-size: 1rem;
+  line-height: 1.9;
+
+  margin-bottom: 34px;
+}
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.agent-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.agent-footer-socials a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.agent-footer-socials a:hover {
+  transform: translateY(-4px);
+
+  background: rgba(184,115,90,0.14);
+
+  border-color: rgba(184,115,90,0.32);
+}
+
+.agent-footer-socials img {
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.agent-footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 50px;
+}
+
+.agent-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.agent-footer-title {
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.agent-footer-column a,
+.agent-footer-location {
+  color: rgba(242,244,247,0.72);
+
+  font-size: 0.96rem;
+  line-height: 1.7;
+
+  transition: color 0.3s ease;
+}
+
+.agent-footer-column a:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.agent-footer-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 24px 0 34px;
+
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.agent-footer-bottom p {
+  color: rgba(242,244,247,0.52);
+
+  font-size: 0.9rem;
+}
+
+.agent-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.agent-footer-bottom-links a {
+  color: rgba(242,244,247,0.58);
+
+  font-size: 0.9rem;
+
+  transition: color 0.3s ease;
+}
+
+.agent-footer-bottom-links a:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 980px) {
+  .agent-footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .agent-footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .agent-footer {
+    padding-top: 70px;
+  }
+
+  .agent-footer-container {
+    width: min(100% - 32px);
+  }
+
+  .agent-footer-links {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .agent-footer-bottom {
+    width: min(100% - 32px);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .agent-footer-logo img {
+    width: 145px;
+  }
+
+  .agent-footer-description {
+    font-size: 0.95rem;
+  }
+}
